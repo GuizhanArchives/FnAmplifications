@@ -50,15 +50,15 @@ public class PowahGenerator extends SlimefunItem implements InventoryBlock, Ener
     private static final int FN_5 = 15;
 
     private static final CustomItemStack generatingItem = new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
-            "&cNot Generating..."
+            "&c尚未运行"
     );
 
     private static final CustomItemStack addonBy = new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
-            "&d&lAddon by FN_FAL113"
+            "&d&l作者:FN_FAL113"
     );
 
     private static final CustomItemStack creditsTo = new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
-            "&eCredits to Jeff(LiteXpansion) and Walshy(SF dev) for letting me use their utils"
+            "&e鸣谢Jeff(LiteXpansion)和 Walshy(SF dev)"
     );
 
     private static final CustomItemStack F = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
@@ -135,7 +135,7 @@ public class PowahGenerator extends SlimefunItem implements InventoryBlock, Ener
         super(FNAmpItems.POWER_GENERATORS, type.getItem(), FnAssemblyStation.RECIPE_TYPE, type.getRecipe());
         this.type = type;
 
-        createPreset(this, type.getItem().getItemMetaSnapshot().getDisplayName().orElse("&eFN Power Xpansion"),
+        createPreset(this, type.getItem().getItemMetaSnapshot().getDisplayName().orElse("&eFN功率拓展"),
                 blockMenuPreset -> {
                     for (int i = 0; i < 18; i++) {
                         blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
@@ -163,29 +163,29 @@ public class PowahGenerator extends SlimefunItem implements InventoryBlock, Ener
         Validate.notNull(l.getWorld());
         final int rate = canGenerate ? getGeneratingAmount(inv.getBlock(), l.getWorld()) : 0;
 
-        String generationType = "&4Unknown";
+        String generationType = "&4未知";
 
         if (l.getWorld().getEnvironment() == World.Environment.NETHER) {
-            generationType = "&cNether &e(Day)";
+            generationType = "&c下界 &e(白天)";
         } else if (l.getWorld().getEnvironment() == World.Environment.THE_END) {
-            generationType = "&5End &8(Night)";
+            generationType = "&5末地 &8(黑夜)";
         } else if (rate == this.type.getDayGenerationRate()) {
-            generationType = "&aOverworld &e(Day)";
+            generationType = "&a主世界 &e(白天)";
         } else if (rate == this.type.getNightGenerationRate()) {
-            generationType = "&aOverworld &8(Night)";
+            generationType = "&a主世界 &8(黑夜)";
         }
 
         if (inv.toInventory() != null && !inv.toInventory().getViewers().isEmpty()) {
             inv.replaceExistingItem(PROGRESS_SLOT,
-                    canGenerate ? new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&aGenerating",
-                            "", "&bRate Type: " + generationType,
-                            "&7Generating Power at &6" + Utils.powerFormatAndFadeDecimals(Utils.perTickToPerSecond(rate)) + " J/s " +
+                    canGenerate ? new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&a运行中",
+                            "", "&b速率类型: " + generationType,
+                            "&7发电量 &6" + Utils.powerFormatAndFadeDecimals(Utils.perTickToPerSecond(rate)) + " J/s " +
                                     "&8(" + rate + " J/t)",
-                            "", "&7Stored Power: &6" + Utils.powerFormatAndFadeDecimals((double) stored + rate) + " J"
+                            "", "&7储电量: &6" + Utils.powerFormatAndFadeDecimals((double) stored + rate) + " J"
                     )
-                            : new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE, "&cNot Generating",
-                            "", "&7Generator has reached maximum capacity.",
-                            "", "&7Stored Power: &6" + Utils.powerFormatAndFadeDecimals(stored) + " J")
+                            : new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE, "&c尚未运行",
+                            "", "&7发电机已达最大容量",
+                            "", "&7储电量: &6" + Utils.powerFormatAndFadeDecimals(stored) + " J")
             );
         }
         return rate;

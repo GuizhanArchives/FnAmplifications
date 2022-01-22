@@ -129,7 +129,7 @@ public class MysteryStick11 extends SlimefunItem {
                     Location newDamagerLoc = new Location(player.getWorld(), victim.getLocation().getX() - nX,
                             victim.getLocation().getY(), victim.getLocation().getZ() - nZ, victim.getLocation().getYaw(), victim.getLocation().getPitch());
                     player.teleport(newDamagerLoc);
-                    victim.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "Behind you awaits danger");
+                    victim.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "危险就在你身后");
                 }
             } else {
                 return;
@@ -137,8 +137,8 @@ public class MysteryStick11 extends SlimefunItem {
         }
         else{
             player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 300, 2, false, false));
-            player.sendTitle(ChatColor.DARK_RED + "Your vision darkens!", ChatColor.RED + "The stick is unpredictable", 45, 120, 135);
-            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FNAmpli" + ChatColor.AQUA + "" + ChatColor.BOLD + "fications] > " + ChatColor.YELLOW + "You're too weak, make sure your exp level is higher than 25");
+            player.sendTitle(ChatColor.DARK_RED + "你的视野变暗了!", ChatColor.RED + "神秘棍是不可预测的", 45, 120, 135);
+            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FN" + ChatColor.AQUA + "" + ChatColor.BOLD + "科技] > " + ChatColor.YELLOW + "你太虚弱了，请先确保你的经验值大于25");
             transformWeapon(player, item);
         }
 
@@ -163,15 +163,15 @@ public class MysteryStick11 extends SlimefunItem {
     }
 
     public List<String> loreUpdate(List<String> lore2, int get_Damage, int xpamount){
-        lore2.add(0,ChatColor.GOLD + "Behind your enemies awaits danger");
-        lore2.add(1, ChatColor.YELLOW + "Exp Levels Consumed: " + ChatColor.WHITE + xpamount);
-        lore2.add(2, ChatColor.YELLOW + "Total Damage inflicted: " + ChatColor.WHITE + get_Damage);
+        lore2.add(0,ChatColor.GOLD + "危机感");
+        lore2.add(1, ChatColor.YELLOW + "经验损耗: " + ChatColor.WHITE + xpamount);
+        lore2.add(2, ChatColor.YELLOW + "伤害总量: " + ChatColor.WHITE + get_Damage);
         lore2.add(3, "");
-        lore2.add(4, ChatColor.RED + "◢◤◢◤◢◤◢◤| "+ ChatColor.DARK_RED + "" + ChatColor.BOLD + "Effects " + ChatColor.WHITE + "|◥◣◥◣◥◣◥◣");
-        lore2.add(5, ChatColor.BLUE +"◆ 35% Chance 5s Slow");
-        lore2.add(6, ChatColor.BLUE +"◆ 40% Chance 4s Weakness");
-        lore2.add(7, ChatColor.BLUE +"◆ 30% Chance 5s Hunger");
-        lore2.add(8, ChatColor.BLUE +"◆ 10% Chance tp behind opponent");
+        lore2.add(4, ChatColor.RED + "◢◤◢◤◢◤◢◤| "+ ChatColor.DARK_RED + "" + ChatColor.BOLD + "效果 " + ChatColor.WHITE + "|◥◣◥◣◥◣◥◣");
+        lore2.add(5, ChatColor.BLUE +"◆ 35%几率  5s 缓慢");
+        lore2.add(6, ChatColor.BLUE +"◆ 40%几率  4s 虚弱");
+        lore2.add(7, ChatColor.BLUE +"◆ 30%几率  5s 饥饿");
+        lore2.add(8, ChatColor.BLUE +"◆ 10%几率  tp 至敌人身后");
         lore2.add(9, ChatColor.RED + "◢◤◢◤◢◤◢◤| " + ChatColor.DARK_RED + "  ◢◤◤◥◤◥◥◣   " + ChatColor.WHITE + "|◥◣◥◣◥◣◥◣");
         return lore2;
     }
@@ -212,9 +212,9 @@ public class MysteryStick11 extends SlimefunItem {
             lore.remove(3);
             lore.remove(3);
             lore.remove(3);
-            lore.set(0, ChatColor.WHITE + "The stick of the nords");
-            lore.set(1, ChatColor.YELLOW + "Exp Levels Consumed: " + ChatColor.WHITE + amount);
-            lore.set(2, ChatColor.YELLOW + "Total Damage inflicted: " + ChatColor.WHITE + damageamount);
+            lore.set(0, ChatColor.WHITE + "定海神针");
+            lore.set(1, ChatColor.YELLOW + "经验损耗: " + ChatColor.WHITE + amount);
+            lore.set(2, ChatColor.YELLOW + "伤害总量: " + ChatColor.WHITE + damageamount);
             meta.setLore(lore);
             meta.removeEnchant(Enchantment.DAMAGE_ARTHROPODS);
             meta.removeEnchant(Enchantment.DAMAGE_ALL);

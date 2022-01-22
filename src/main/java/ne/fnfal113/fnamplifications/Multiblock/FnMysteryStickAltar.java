@@ -26,7 +26,7 @@ public class FnMysteryStickAltar extends MultiBlockMachine {
             new NamespacedKey(FNAmplifications.getInstance(), "fn_mystery_stick_altar"),
             FNAmpItems.FN_STICK_ALTAR,
             "",
-            "&fThis is where you craft the mysterious sticks!"
+            "&f这是你组装神秘棍的地方!"
     );
 
 

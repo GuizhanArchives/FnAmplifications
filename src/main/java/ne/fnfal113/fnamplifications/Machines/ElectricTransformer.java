@@ -41,10 +41,10 @@ public class ElectricTransformer extends AContainer implements RecipeDisplayItem
         for (MachineRecipe recipe : recipes) {
             displayRecipes.add(recipe.getInput()[0]);
             displayRecipes.add(recipe.getInput()[1]);
-            displayRecipes.add(new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, "&eIndicator", "&fArrow below point towards the output of 2 vertical inputs"));
+            displayRecipes.add(new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, "&e提示", "&f下面的箭头指向两个垂直输入的输出"));
             displayRecipes.add(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "682ad1b9cb4dd21259c0d75aa315ff389c3cef752be3949338164bac84a96e")));
-            displayRecipes.add(new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, "&eIndicator", "&fNext item beside this glass is", "&fa 2 input recipe vertical 1 output horizontal"));
+            displayRecipes.add(new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, "&e提示", "&f两个垂直方向的物品是输入", "&f该提示下方的物品是输出"));
             displayRecipes.add(recipe.getOutput()[0]);
         }
 

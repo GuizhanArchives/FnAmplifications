@@ -127,14 +127,14 @@ public class MysteryStick10 extends SlimefunItem {
                         player.setHealth(player.getHealth() + 2);
                         victim.setHealth(victim.getHealth() - 2);
                     } else {
-                        player.sendMessage(ChatColor.RED + "Make sure your hp points is below 18 for Lifesteal to proc!");
+                        player.sendMessage(ChatColor.RED + "请先确保你的生命值低于18!");
                     }
                 }
                 if(ThreadLocalRandom.current().nextInt(100) < 20){
                     Location loc = victim.getLocation();
                     loc.setYaw(loc.getYaw() + 180);
                     victim.teleport(loc);
-                    victim.sendMessage(ChatColor.DARK_RED + "You have been disoriented! your opponent's mysterious stick is deadly");
+                    victim.sendMessage(ChatColor.DARK_RED + "你已迷失了方向！对手的神秘棍是致命的！");
                 }
             } else {
                 return;
@@ -142,8 +142,8 @@ public class MysteryStick10 extends SlimefunItem {
         }
         else{
             player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 300, 2, false, false));
-            player.sendTitle(ChatColor.DARK_RED + "Your vision darkens!", ChatColor.RED + "The stick is unpredictable", 45, 120, 135);
-            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FNAmpli" + ChatColor.AQUA + "" + ChatColor.BOLD + "fications] > " + ChatColor.YELLOW + "You're too weak, make sure your exp level is higher than 25");
+            player.sendTitle(ChatColor.DARK_RED + "你的视野变暗了!", ChatColor.RED + "神秘棍是不可预测的", 45, 120, 135);
+            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FN" + ChatColor.AQUA + "" + ChatColor.BOLD + "科技] > " + ChatColor.YELLOW + "你太虚弱了，请先确保你的经验值大于25");
             transformWeapon(player, item);
         }
 
@@ -168,16 +168,16 @@ public class MysteryStick10 extends SlimefunItem {
     }
 
     public List<String> loreUpdate(List<String> lore2, int get_Damage, int xpamount){
-        lore2.add(0,ChatColor.GOLD + "Why is this stick too good");
-        lore2.add(1, ChatColor.YELLOW + "Exp Levels Consumed: " + ChatColor.WHITE + xpamount);
-        lore2.add(2, ChatColor.YELLOW + "Total Damage inflicted: " + ChatColor.WHITE + get_Damage);
+        lore2.add(0,ChatColor.GOLD + "狂乱的鸡尾酒");
+        lore2.add(1, ChatColor.YELLOW + "经验损耗: " + ChatColor.WHITE + xpamount);
+        lore2.add(2, ChatColor.YELLOW + "伤害总量: " + ChatColor.WHITE + get_Damage);
         lore2.add(3, "");
-        lore2.add(4, ChatColor.RED + "◢◤◢◤◢◤◢◤| "+ ChatColor.DARK_RED + "" + ChatColor.BOLD + "Effects " + ChatColor.WHITE + "|◥◣◥◣◥◣◥◣");
-        lore2.add(5, ChatColor.BLUE +"◆ 40% Chance 5s Poison");
-        lore2.add(6, ChatColor.BLUE +"◆ 35% Chance 5s Wither");
-        lore2.add(7, ChatColor.BLUE +"◆ 30% Chance 4s Weakness");
-        lore2.add(8, ChatColor.BLUE +"◆ 25% Chance ♡ Lifesteal");
-        lore2.add(9, ChatColor.BLUE +"◆ 20% Chance 180° rotation");
+        lore2.add(4, ChatColor.RED + "◢◤◢◤◢◤◢◤| "+ ChatColor.DARK_RED + "" + ChatColor.BOLD + "效果 " + ChatColor.WHITE + "|◥◣◥◣◥◣◥◣");
+        lore2.add(5, ChatColor.BLUE +"◆ 40%几率  5s 中毒");
+        lore2.add(6, ChatColor.BLUE +"◆ 35%几率  5s 凋零");
+        lore2.add(7, ChatColor.BLUE +"◆ 30%几率  4s 虚弱");
+        lore2.add(8, ChatColor.BLUE +"◆ 25%几率  1s 治疗");
+        lore2.add(9, ChatColor.BLUE +"◆ 20%几率 180°旋转");
         lore2.add(10,ChatColor.RED + "◢◤◢◤◢◤◢◤| " + ChatColor.DARK_RED + "  ◢◤◤◥◤◥◥◣   " + ChatColor.WHITE + "|◥◣◥◣◥◣◥◣");
         return lore2;
     }
@@ -220,9 +220,9 @@ public class MysteryStick10 extends SlimefunItem {
             lore.remove(3);
             lore.remove(3);
             lore.remove(3);
-            lore.set(0, ChatColor.WHITE + "Deadly or creepy stick");
-            lore.set(1, ChatColor.YELLOW + "Exp Levels Consumed: " + ChatColor.WHITE + amount);
-            lore.set(2, ChatColor.YELLOW + "Total Damage inflicted: " + ChatColor.WHITE + damageamount);
+            lore.set(0, ChatColor.WHITE + "致命");
+            lore.set(1, ChatColor.YELLOW + "经验损耗: " + ChatColor.WHITE + amount);
+            lore.set(2, ChatColor.YELLOW + "伤害总量: " + ChatColor.WHITE + damageamount);
             meta.setLore(lore);
             meta.removeEnchant(Enchantment.SWEEPING_EDGE);
             meta.removeEnchant(Enchantment.DAMAGE_ALL);

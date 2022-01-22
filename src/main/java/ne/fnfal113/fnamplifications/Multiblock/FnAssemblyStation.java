@@ -26,7 +26,7 @@ public class FnAssemblyStation extends MultiBlockMachine {
             new NamespacedKey(FNAmplifications.getInstance(), "fn_assembly_station"),
             FNAmpItems.FN_ASSEMBLY_STATION,
             "",
-            "&fThis is where you craft some FN stuffs!"
+            "&f这是你合成FN物品的地方!"
     );
 
 

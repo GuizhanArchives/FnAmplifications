@@ -81,14 +81,14 @@ public class Quiver extends SlimefunItem {
 
                 itemState.setType(Material.ARROW);
                 lore.add(0, "");
-                lore.add(1, ChatColor.LIGHT_PURPLE + "Store inside the quiver");
-                lore.add(2, ChatColor.LIGHT_PURPLE + "by right clicking arrows or");
-                lore.add(3, ChatColor.LIGHT_PURPLE + "shift click quiver to withdraw");
+                lore.add(1, ChatColor.LIGHT_PURPLE + "右击 箭");
+                lore.add(2, ChatColor.LIGHT_PURPLE + "储存至箭袋");
+                lore.add(3, ChatColor.LIGHT_PURPLE + "shift+右击 取出箭");
                 lore.add(4, "");
-                lore.add(5, ChatColor.YELLOW + "Left/Right click to change state");
-                lore.add(6, ChatColor.YELLOW + "Size: 192 Arrows");
-                lore.add(7, ChatColor.YELLOW + "Arrows: " + ChatColor.WHITE + arrowsCheckPDC);
-                lore.add(8, ChatColor.YELLOW +  "State: Open Quiver");
+                lore.add(5, ChatColor.YELLOW + "左击/右击 切换形态");
+                lore.add(6, ChatColor.YELLOW + "容量: 192 支");
+                lore.add(7, ChatColor.YELLOW + "箭数: " + ChatColor.WHITE + arrowsCheckPDC);
+                lore.add(8, ChatColor.YELLOW + "状态: 开启");
                 arrowMeta.setLore(lore);
                 itemState.setItemMeta(arrowMeta);
             }
@@ -104,14 +104,14 @@ public class Quiver extends SlimefunItem {
 
                 itemState.setType(Material.LEATHER);
                 lore.add(0, "");
-                lore.add(1, ChatColor.LIGHT_PURPLE + "Store inside the quiver");
-                lore.add(2, ChatColor.LIGHT_PURPLE + "by right clicking arrows or");
-                lore.add(3, ChatColor.LIGHT_PURPLE + "shift click quiver to withdraw");
+                lore.add(1, ChatColor.LIGHT_PURPLE + "右击 箭");
+                lore.add(2, ChatColor.LIGHT_PURPLE + "储存至箭袋");
+                lore.add(3, ChatColor.LIGHT_PURPLE + "shift+右击 取出箭");
                 lore.add(4, "");
-                lore.add(5, ChatColor.YELLOW + "Left/Right click to change state");
-                lore.add(6, ChatColor.YELLOW + "Size: 192 Arrows");
-                lore.add(7, ChatColor.YELLOW + "Arrows: " + ChatColor.WHITE + arrowsCheckPDC);
-                lore.add(8, ChatColor.YELLOW + "State: Closed Quiver");
+                lore.add(5, ChatColor.YELLOW + "左击/右击 切换形态");
+                lore.add(6, ChatColor.YELLOW + "容量: 192 支");
+                lore.add(7, ChatColor.YELLOW + "箭数: " + ChatColor.WHITE + arrowsCheckPDC);
+                lore.add(8, ChatColor.YELLOW + "状态: 关闭");
                 arrowMeta.setLore(lore);
                 itemState.setItemMeta(arrowMeta);
 
@@ -159,21 +159,21 @@ public class Quiver extends SlimefunItem {
         int amount = decrement - 1;
         arrows_Check.set(key, PersistentDataType.INTEGER, amount);
         lore.add(0, "");
-        lore.add(1, ChatColor.LIGHT_PURPLE + "Store inside the quiver");
-        lore.add(2, ChatColor.LIGHT_PURPLE + "by right clicking arrows or");
-        lore.add(3, ChatColor.LIGHT_PURPLE + "shift click quiver to withdraw");
+        lore.add(1, ChatColor.LIGHT_PURPLE + "右击 箭");
+        lore.add(2, ChatColor.LIGHT_PURPLE + "储存至箭袋");
+        lore.add(3, ChatColor.LIGHT_PURPLE + "shift+右击 取出箭");
         lore.add(4, "");
-        lore.add(5, ChatColor.YELLOW + "Left/Right click to change state");
-        lore.add(6, ChatColor.YELLOW + "Size: 192 Arrows");
-        lore.add(7, ChatColor.YELLOW + "Arrows: " + ChatColor.WHITE + amount);
+        lore.add(5, ChatColor.YELLOW + "左击/右击 切换形态");
+        lore.add(6, ChatColor.YELLOW + "容量: 192 支");
+        lore.add(7, ChatColor.YELLOW + "箭数: " + ChatColor.WHITE + amount);
         if(amount == 0){
-            lore.add(8, ChatColor.YELLOW + "State: Closed Quiver (Empty)");
+            lore.add(8, ChatColor.YELLOW + "状态: 关闭(空)");
             itemState.setType(Material.LEATHER);
-            player.sendMessage(ChatColor.GOLD + "Quiver is now empty");
+            player.sendMessage(ChatColor.GOLD + "箭袋已经空了！");
         } else if (itemState.getType() == Material.ARROW){
-            lore.add(8, ChatColor.YELLOW + "State: Open Quiver");
+            lore.add(8, ChatColor.YELLOW + "状态: 开启");
         } else {
-            lore.add(8, ChatColor.YELLOW + "State: Closed Quiver");
+            lore.add(8, ChatColor.YELLOW + "状态: 关闭");
         }
         arrowMeta.setLore(lore);
         itemState.setItemMeta(arrowMeta);
@@ -191,14 +191,14 @@ public class Quiver extends SlimefunItem {
         if (increment != 193) {
             arrow_Left.set(key, PersistentDataType.INTEGER, increment);
             lore.add(0, "");
-            lore.add(1, ChatColor.LIGHT_PURPLE + "Store inside the quiver");
-            lore.add(2, ChatColor.LIGHT_PURPLE + "by right clicking arrows or");
-            lore.add(3, ChatColor.LIGHT_PURPLE + "shift click quiver to withdraw");
+            lore.add(1, ChatColor.LIGHT_PURPLE + "右击 箭");
+            lore.add(2, ChatColor.LIGHT_PURPLE + "储存至箭袋");
+            lore.add(3, ChatColor.LIGHT_PURPLE + "shift+右击 取出箭");
             lore.add(4, "");
-            lore.add(5, ChatColor.YELLOW + "Left/Right click to change state");
-            lore.add(6, ChatColor.YELLOW + "Size: 192 Arrows");
-            lore.add(7, ChatColor.YELLOW + "Arrows: " + ChatColor.WHITE + increment);
-            lore.add(8, ChatColor.YELLOW + "State: Open Quiver");
+            lore.add(5, ChatColor.YELLOW + "左击/右击 切换形态");
+            lore.add(6, ChatColor.YELLOW + "容量: 192 支");
+            lore.add(7, ChatColor.YELLOW + "箭数: " + ChatColor.WHITE + increment);
+            lore.add(8, ChatColor.YELLOW + "状态: 开启");
             meta.setLore(lore);
             if(increment <= 2) {
                 int random = ThreadLocalRandom.current().nextInt(1, 999999 + 1);
@@ -209,7 +209,7 @@ public class Quiver extends SlimefunItem {
             itemStack.setAmount(itemStack.getAmount() - 1);
 
             if(increment == 192){
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lQuiver is full!"));
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&l箭袋已经满了!"));
             }
 
         }
@@ -255,23 +255,23 @@ public class Quiver extends SlimefunItem {
                 if (decrement >= 0) {
                     arrow_Left.set(key, PersistentDataType.INTEGER, decrement);
                     lore.add(0, "");
-                    lore.add(1, ChatColor.LIGHT_PURPLE + "Store inside the quiver");
-                    lore.add(2, ChatColor.LIGHT_PURPLE + "by right clicking arrows or");
-                    lore.add(3, ChatColor.LIGHT_PURPLE + "shift click quiver to withdraw");
+                    lore.add(1, ChatColor.LIGHT_PURPLE + "右击 箭");
+                    lore.add(2, ChatColor.LIGHT_PURPLE + "储存至箭袋");
+                    lore.add(3, ChatColor.LIGHT_PURPLE + "shift+右击 取出箭");
                     lore.add(4, "");
-                    lore.add(5, ChatColor.YELLOW + "Left/Right click to change state");
-                    lore.add(6, ChatColor.YELLOW + "Size: 192 Arrows");
-                    lore.add(7, ChatColor.YELLOW + "Arrows: " + ChatColor.WHITE + decrement);
-                    lore.add(8, ChatColor.YELLOW + "State: Open Quiver");
+                    lore.add(5, ChatColor.YELLOW + "左击/右击 切换形态");
+                    lore.add(6, ChatColor.YELLOW + "容量: 192 Arrows");
+                    lore.add(7, ChatColor.YELLOW + "箭数: " + ChatColor.WHITE + decrement);
+                    lore.add(8, ChatColor.YELLOW + "状态: 开启");
                     meta.setLore(lore);
                     itemStack.setItemMeta(meta);
 
                     if (decrement == 0) {
                         itemStack.setType(Material.LEATHER);
-                        lore.set(8, ChatColor.YELLOW + "State: Closed Quiver (Empty)");
+                        lore.set(8, ChatColor.YELLOW + "状态: 关闭 (空)");
                         meta.setLore(lore);
                         itemStack.setItemMeta(meta);
-                        player.sendMessage(ChatColor.GOLD + "Quiver is now empty");
+                        player.sendMessage(ChatColor.GOLD + "箭袋现在是空的!");
                     }
 
                 }

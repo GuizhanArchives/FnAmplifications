@@ -111,8 +111,8 @@ public class MysteryStick4 extends SlimefunItem {
         }
         else{
             player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 300, 2, false, false));
-            player.sendTitle(ChatColor.DARK_RED + "Your vision darkens!", ChatColor.RED + "The stick is unpredictable", 45, 120, 135);
-            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FNAmpli" + ChatColor.AQUA + "" + ChatColor.BOLD + "fications] > " + ChatColor.YELLOW + "You're too weak, make sure your exp level is higher than 15");
+            player.sendTitle(ChatColor.DARK_RED + "你的视野变暗了!", ChatColor.RED + "神秘棍是不可预测的", 45, 120, 135);
+            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FN" + ChatColor.AQUA + "" + ChatColor.BOLD + "科技] > " + ChatColor.YELLOW + "你太虚弱了，请先确保你的经验值大于15");
             transformWeapon(player, item);
         }
         ItemMeta meta = item.getItemMeta();
@@ -136,9 +136,9 @@ public class MysteryStick4 extends SlimefunItem {
     }
 
     public List<String> loreUpdate(List<String> lore2, int get_Damage, int xpamount){
-        lore2.add(0,ChatColor.GOLD + "It was indeed a magical improvement");
-        lore2.add(1, ChatColor.YELLOW + "Exp Levels Consumed: " + ChatColor.WHITE + xpamount);
-        lore2.add(2, ChatColor.YELLOW + "Total Damage inflicted: " + ChatColor.WHITE + get_Damage);
+        lore2.add(0,ChatColor.GOLD + "高级魔法");
+        lore2.add(1, ChatColor.YELLOW + "经验损耗: " + ChatColor.WHITE + xpamount);
+        lore2.add(2, ChatColor.YELLOW + "伤害总量: " + ChatColor.WHITE + get_Damage);
         return lore2;
     }
 
@@ -171,9 +171,9 @@ public class MysteryStick4 extends SlimefunItem {
         item.setItemMeta(meta);
 
         if (p.getLevel() <= 15) {
-            lore.set(0, ChatColor.WHITE + "Did I use this before or maybe not");
-            lore.set(1, ChatColor.YELLOW + "Exp Levels Consumed: " + ChatColor.WHITE + amount);
-            lore.set(2, ChatColor.YELLOW + "Total Damage inflicted: " + ChatColor.WHITE + damageamount);
+            lore.set(0, ChatColor.WHITE + "老练");
+            lore.set(1, ChatColor.YELLOW + "经验损耗: " + ChatColor.WHITE + amount);
+            lore.set(2, ChatColor.YELLOW + "伤害总量: " + ChatColor.WHITE + damageamount);
             meta.setLore(lore);
             meta.removeEnchant(Enchantment.SWEEPING_EDGE);
             meta.removeEnchant(Enchantment.DAMAGE_ALL);

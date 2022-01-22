@@ -38,9 +38,8 @@ public class ElectricMachineDowngrader extends CMachine implements RecipeDisplay
     public static final RecipeType RECIPE_TYPE = new RecipeType(
             new NamespacedKey(FNAmplifications.getInstance(), "fn_fal_downgrader"),
             FNAmpItems.FN_FAL_DOWNGRADER,
-            "&fGet metal scraps from downgrading a",
-            "&fmachine using Machine Downgrader",
-            "&bYields metal scraps at certain chance"
+            "&f电机降级器",
+            "&f有几率产生金属废料"
     );
 
     public ElectricMachineDowngrader(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {

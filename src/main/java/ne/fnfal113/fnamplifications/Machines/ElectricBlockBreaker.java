@@ -61,42 +61,42 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
     private static final ItemStack VERSIONED_AMETHYST;
 
     private static final CustomItemStack NOT_OPERATING = new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
-        "&cNot Operating...",
-        "&ePlace a block facing the dispenser!"
+        "&c尚未运行",
+        "&e请在机口前放置方块!"
     );
 
     private static final CustomItemStack NO_POWER = new CustomItemStack(Material.RED_STAINED_GLASS_PANE,
-        "&cNo Power!",
-        "&ePower it up first!"
+        "&c没有足够的电力!",
+        "&e请先通电!"
     );
 
     private static final CustomItemStack NOT_RUNNING = new CustomItemStack(Material.YELLOW_STAINED_GLASS_PANE,
-        "&cNot Running",
-        "&eToggle it on first"
+        "&c停止运行",
+        "&e请先启动它"
     );
 
     private static final CustomItemStack BREAK_BLOCK_NATURALLY = new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
-        "&d&lMode:",
-        "&eBreak block naturally (No Silk Touch)",
+        "&d&l模式:",
+        "&e破坏方块 (无精准采集)",
         "Click to change"
     );
 
     private static final CustomItemStack DROP_BLOCK_NATURALLY = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
-        "&d&lMode:",
-        "&eDrop block naturally (Silk Touch)",
+        "&d&l模式:",
+        "&e破坏方块 (精准采集)",
         "Click to change"
     );
 
     private static final CustomItemStack TOGGLED_ON = new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE,
-        "&d&lToggle:",
-        "&eEnabled (Running)",
-        "Click to change"
+        "&d&l开关:",
+        "&e运行",
+        "单击切换状态"
     );
 
     private static final CustomItemStack TOGGLED_OFF = new CustomItemStack(Material.WHITE_STAINED_GLASS_PANE,
-        "&d&lToggle:",
-        "&eDisabled (Not Running)",
-        "Click to change"
+        "&d&l开关:",
+        "&e停止运行",
+        "单击切换状态"
     );
 
     public static final ItemStack DUMMY_PICK = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -290,8 +290,8 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
                     int progress = cache.progress;
 
                     if (invMenu.hasViewer()) {
-                        invMenu.replaceExistingItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&aOperating!",
-                            "", "&bRate: " + this.rate + " Block per tick", "&2Breaking block at rate: " + progress
+                        invMenu.replaceExistingItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&a运行中!",
+                            "", "&b速率: " + this.rate + " 方块/t", "&2按速率破坏方块: " + progress
                             + "/" + this.rate));
                     }
 
