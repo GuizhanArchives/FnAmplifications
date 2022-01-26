@@ -1,11 +1,11 @@
-# FN Amplifications
-A merge of my 4 addons in a one addon for Slimefun which adds Power Generators, Material Generators, Machineries with Recipe Items and Solar Generators
+# FN Amplifications - FN科技
 
-Credits to Jeff(LiteXpansion) and Walshy(SF) for their utils and generator methods
+由FN-FAL113编写的4合1附属插件，添加了发电机、材料发电机、机器以及太阳能发电机
 
-Credits to waleks for the SMG based gens (now under the hands of Sefiraat and Variananora)
+感谢 Jeff(LiteXpansion) 和 Walshy(Slimefun) 提供的工具包  
+感谢 waleks 的 SMG 附属 (现在由 Sefiraat 与 Variananora 维护)
 
-Addon supports 1.15.x, 1.16.x, 1.17.x and 1.18.x minecraft versions
+本插件支持1.15-1.18版本
 
 ## Download from build page with auto updates
 ### [Download Official Jar](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main)
@@ -55,5 +55,6 @@ Addon supports 1.15.x, 1.16.x, 1.17.x and 1.18.x minecraft versions
 </p>
 
 ### Slimefun addons
+
 Addon is now part of Slimefun Community Addons! Go check out others addon here:
 https://github.com/Slimefun/Slimefun4/wiki/Addons
