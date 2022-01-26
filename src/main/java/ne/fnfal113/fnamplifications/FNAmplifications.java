@@ -10,8 +10,8 @@ import ne.fnfal113.fnamplifications.Gears.Runnables.ArmorEquipRunnable;
 import ne.fnfal113.fnamplifications.MysteriousItems.Listeners.MysteryStickListener;
 import ne.fnfal113.fnamplifications.Quiver.Listener.QuiverListener;
 import ne.fnfal113.fnamplifications.Staffs.Listener.StaffListener;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import org.bstats.bukkit.Metrics;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import ne.fnfal113.fnamplifications.Items.FNAmpItemSetup;
@@ -19,6 +19,8 @@ import ne.fnfal113.fnamplifications.Items.FNAmpItemSetup;
 public final class FNAmplifications extends JavaPlugin implements SlimefunAddon {
 
     private static FNAmplifications instance;
+
+    private ConfigManager configManager;
 
     @Override
     public void onEnable() {
@@ -32,6 +34,8 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
         getLogger().info("               如有任何问题，请前往问题追踪器汇报                 ");
         getLogger().info("                作者 Discord: FN_FAL#7779                    ");
         getLogger().info("************************************************************");
+
+        configManager = new ConfigManager(this);
 
         FNAmpItemSetup.INSTANCE.init();
 
@@ -66,5 +70,9 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
 
     public static FNAmplifications getInstance() {
         return instance;
+    }
+
+    public ConfigManager getConfigManager() {
+        return configManager;
     }
 }

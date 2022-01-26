@@ -8,10 +8,11 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import ne.fnfal113.fnamplifications.ConfigValues.ReturnConfValue;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
+import net.guizhanss.guizhanlib.minecraft.helper.entity.EntityHelper;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
@@ -32,7 +33,7 @@ public class StaffOfLocomotion extends SlimefunItem {
 
     private static final SlimefunAddon plugin = FNAmplifications.getInstance();
 
-    private static final ReturnConfValue value = new ReturnConfValue();
+    private static final ConfigManager value = FNAmplifications.getInstance().getConfigManager();
 
     private final NamespacedKey defaultUsageKey;
 
@@ -71,7 +72,7 @@ public class StaffOfLocomotion extends SlimefunItem {
 
         int uses_Left = max_Uses.getOrDefault(key, PersistentDataType.INTEGER, value.staffOfLocomotion());
 
-        List<String> lore = new ArrayList<>();
+        List<String> lore = meta.getLore();
 
         LivingEntity en = (LivingEntity) event.getRightClicked();
 
@@ -80,27 +81,32 @@ public class StaffOfLocomotion extends SlimefunItem {
                 en.getLocation(),
                 Interaction.INTERACT_ENTITY)
         ) {
-            player.sendMessage(ChatColor.DARK_RED + "You don't have permission to select this entity!");
+            player.sendMessage(ChatColor.DARK_RED + "你没有权限选中该实体!");
             return;
         }
 
         if(!ENTITY_OWNER.containsValue(en)) {
             ENTITY_OWNER.remove(data);
             data.set(key2, PersistentDataType.DOUBLE, Math.random());
-            lore.add(0, "");
-            lore.add(1, ChatColor.LIGHT_PURPLE + "Move entities to a target location by right");
-            lore.add(2, ChatColor.LIGHT_PURPLE + "clicking to select and left click to move");
-            lore.add(3, "");
-            lore.add(4, ChatColor.YELLOW + "Uses left: " + uses_Left);
-            lore.add(5, "");
-            lore.add(6,ChatColor.WHITE + "Entity right clicked: " + ChatColor.ITALIC +en.getName());
-            lore.add(7,ChatColor.WHITE + "Entity ID: " + ChatColor.ITALIC + en.getEntityId());
+            lore.set(4, ChatColor.YELLOW + "剩余使用次数: " + uses_Left);
+            if (lore.size() <= 5) {
+                lore.add("");
+                lore.add(ChatColor.WHITE + "已选中实体: " + ChatColor.ITALIC + EntityHelper.getDisplayName(en));
+                lore.add(ChatColor.WHITE + "实体ID: " + ChatColor.ITALIC + en.getEntityId());
+            } else {
+                lore.set(6, ChatColor.WHITE + "已选中实体: " + ChatColor.ITALIC + EntityHelper.getDisplayName(en));
+                if (lore.size() <= 7) {
+                    lore.add(ChatColor.WHITE + "实体ID: " + ChatColor.ITALIC + en.getEntityId());
+                } else {
+                    lore.set(7, ChatColor.WHITE + "实体ID: " + ChatColor.ITALIC + en.getEntityId());
+                }
+            }
             meta.setLore(lore);
             item.setItemMeta(meta);
             ENTITY_OWNER.put(data, en);
             Objects.requireNonNull(player.getLocation().getWorld()).playSound(player.getLocation(), Sound.ENTITY_ILLUSIONER_MIRROR_MOVE, 1 ,1);
         } else {
-            player.sendMessage("This entity has been right clicked already!");
+            player.sendMessage("该实体已被选中!");
         }
     }
 
@@ -127,12 +133,12 @@ public class StaffOfLocomotion extends SlimefunItem {
                 block,
                 Interaction.INTERACT_BLOCK)
         ) {
-            player.sendMessage(ChatColor.DARK_RED + "You don't have permission to teleport entity there!");
+            player.sendMessage(ChatColor.DARK_RED + "你没有权限将实体传送至到目标点!");
             return;
         }
 
         if(ENTITY_OWNER.get(data) == null){
-            player.sendMessage("You haven't right clicked an entity or Entity ID changed after server restart");
+            player.sendMessage(ChatColor.WHITE + "你需要选择一个新的实体");
             return;
         }
 
@@ -151,22 +157,18 @@ public class StaffOfLocomotion extends SlimefunItem {
         int uses_Left = max_Uses.getOrDefault(key, PersistentDataType.INTEGER, value.staffOfLocomotion());
         int decrement = uses_Left - 1;
 
-        List<String> lore = new ArrayList<>();
+        List<String> lore = meta.getLore();
 
         if(decrement > 0) {
             max_Uses.set(key, PersistentDataType.INTEGER, decrement);
-            lore.add(0, "");
-            lore.add(1, ChatColor.LIGHT_PURPLE + "Move entities to a target location by right");
-            lore.add(2, ChatColor.LIGHT_PURPLE + "clicking to select and left click to move");
-            lore.add(3, "");
-            lore.add(4, ChatColor.YELLOW + "Uses left: " + decrement);
-            lore.add(5, "");
-            lore.add(6, ChatColor.translateAlternateColorCodes('&', "&fEntity right clicked: &oNone"));
+            lore.set(4, ChatColor.YELLOW + "剩余使用次数: " + uses_Left);
+            lore.set(6, ChatColor.WHITE + "已选中实体: " + ChatColor.ITALIC + "无");
+            lore.remove(7);
             meta.setLore(lore);
             item.setItemMeta(meta);
         } else {
             player.getInventory().setItemInMainHand(null);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lLocomotion staff has reached max uses!"));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&l机动法杖使用次数已达上限!"));
             player.playSound(player.getLocation(), Sound.ENTITY_ITEM_BREAK, 1 ,1);
         }
 

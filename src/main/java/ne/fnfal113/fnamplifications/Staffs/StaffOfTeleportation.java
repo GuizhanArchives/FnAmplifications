@@ -1,107 +1,74 @@
 package ne.fnfal113.fnamplifications.Staffs;
 
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.implementation.items.LimitedUseItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import ne.fnfal113.fnamplifications.ConfigValues.ReturnConfValue;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
-import org.bukkit.*;
+import net.guizhanss.minecraft.fnamplifications.Util;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataContainer;
-import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.util.Vector;
 
 import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-public class StaffOfTeleportation extends SlimefunItem {
+public class StaffOfTeleportation extends LimitedUseItem {
 
-    private static final SlimefunAddon plugin = FNAmplifications.getInstance();
+    private static final ConfigManager value = FNAmplifications.getInstance().getConfigManager();
 
-    private static final ReturnConfValue value = new ReturnConfValue();
-
-    private final NamespacedKey defaultUsageKey;
+    private static final NamespacedKey usageKey = new NamespacedKey(FNAmplifications.getInstance(), "tpstaff");
 
     public StaffOfTeleportation(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
 
-        this.defaultUsageKey = new NamespacedKey(FNAmplifications.getInstance(), "tpstaff");
+        setMaxUseCount(value.staffOfTeleportation());
     }
 
-    protected @Nonnull
-    NamespacedKey getStorageKey() {
-        return defaultUsageKey;
+    @Override
+    protected @Nonnull NamespacedKey getStorageKey() {
+        return usageKey;
     }
 
-    public void onRightClick(PlayerInteractEvent event){
-        Player player = event.getPlayer();
-        Vector directional = player.getLocation().getDirection();
-        ItemStack item = player.getInventory().getItemInMainHand();
-        NamespacedKey key = getStorageKey();
-        Block block = event.getPlayer().getTargetBlockExact(100);
+    @Override
+    public @Nonnull ItemUseHandler getItemHandler() {
+        return e -> {
+            Player p = e.getPlayer();
+            ItemStack item = e.getItem();
+            Block block = p.getTargetBlockExact(100);
+            Vector directional = p.getLocation().getDirection();
 
-        if(block == null || item.getType() == Material.AIR){
-            return;
-        }
+            if (block == null || item.getType() == Material.AIR){
+                return;
+            }
 
-        if (!Slimefun.getProtectionManager().hasPermission(
-                Bukkit.getOfflinePlayer(player.getUniqueId()),
+            if (!Slimefun.getProtectionManager().hasPermission(
+                Bukkit.getOfflinePlayer(p.getUniqueId()),
                 block,
                 Interaction.BREAK_BLOCK)
-        ) {
-            player.sendMessage(ChatColor.DARK_RED + "You don't have permission to teleport there!");
-            return;
-        }
+            ) {
+                Util.send(p, "&4你没有权限传送到目标地点!");
+                return;
+            }
 
-        if(item.getItemMeta() == null){
-            return;
-        }
-
-        ItemMeta meta = item.getItemMeta();
-
-        updateMeta(item, meta, key, player);
-        player.teleport(block.getLocation().add(0.5, 1, 0.5).setDirection(directional));
-
-        Objects.requireNonNull(player.getLocation().getWorld()).playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
-
-    }
-
-    public void updateMeta(ItemStack item, ItemMeta meta, NamespacedKey key, Player player){
-        PersistentDataContainer max_Uses = meta.getPersistentDataContainer();
-        int uses_Left = max_Uses.getOrDefault(key, PersistentDataType.INTEGER, value.staffOfTeleportation());
-        int decrement = uses_Left - 1;
-
-        List<String> lore = new ArrayList<>();
-
-        if(decrement > 0) {
-            max_Uses.set(key, PersistentDataType.INTEGER, decrement);
-            lore.add(0, "");
-            lore.add(1, ChatColor.LIGHT_PURPLE + "Teleport to a target block by");
-            lore.add(2, ChatColor.LIGHT_PURPLE + "right clicking it");
-            lore.add(3, "");
-            lore.add(4, ChatColor.YELLOW + "Uses left: " + decrement);
-            meta.setLore(lore);
-            item.setItemMeta(meta);
-        } else {
-            player.getInventory().setItemInMainHand(null);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lTeleportation staff has reached max uses!"));
-            player.playSound(player.getLocation(), Sound.ENTITY_ITEM_BREAK, 1 ,1);
-        }
-
-
+            e.cancel();
+            damageItem(p, item);
+            p.teleport(block.getLocation().add(0.5, 1, 0.5).setDirection(directional));
+            Objects.requireNonNull(p.getLocation().getWorld()).playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
+        };
     }
 
     public static ItemStack ALT_RECIPE = SlimefunItems.COMMON_TALISMAN;
@@ -118,6 +85,6 @@ public class StaffOfTeleportation extends SlimefunItem {
                 new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_3, 5), ALT_RECIPE, new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 5),
                 SlimefunItems.ENDER_RUNE, new ItemStack(Material.BLAZE_ROD), SlimefunItems.ENDER_RUNE,
                 new SlimefunItemStack(SlimefunItems.BLANK_RUNE, 2), SlimefunItems.MAGIC_EYE_OF_ENDER, new SlimefunItemStack(SlimefunItems.BLANK_RUNE, 2)})
-                .register(plugin);
+                .register(FNAmplifications.getInstance());
     }
 }

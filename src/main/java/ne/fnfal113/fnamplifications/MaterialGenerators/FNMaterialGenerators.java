@@ -10,7 +10,7 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 
-import ne.fnfal113.fnamplifications.ConfigValues.ReturnConfValue;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 import ne.fnfal113.fnamplifications.MaterialGenerators.Methods.CustomBrokenGenerator;
@@ -20,7 +20,7 @@ import ne.fnfal113.fnamplifications.MaterialGenerators.Methods.CustomMaterialGen
 public class FNMaterialGenerators {
 
     private static final SlimefunAddon plugin = FNAmplifications.getInstance();
-    private static final ReturnConfValue value = new ReturnConfValue();
+    private static final ConfigManager value = FNAmplifications.getInstance().getConfigManager();
 
     public static ItemStack SMG_ITEMSTACK_GRAVEL = new ItemStack(Material.DIAMOND_PICKAXE);
     public static ItemStack SMG_ITEMSTACK_COBBLE = SlimefunItems.DAMASCUS_STEEL_INGOT;

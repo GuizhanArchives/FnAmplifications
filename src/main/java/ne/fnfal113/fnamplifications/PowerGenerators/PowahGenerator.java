@@ -7,6 +7,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
@@ -33,12 +34,12 @@ import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import dev.j3fftw.extrautils.interfaces.InventoryBlock;
 import dev.j3fftw.extrautils.utils.Utils;
 
-import ne.fnfal113.fnamplifications.ConfigValues.ReturnConfValue;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 
 public class PowahGenerator extends SlimefunItem implements InventoryBlock, EnergyNetProvider {
 
-    private static final ReturnConfValue value = new ReturnConfValue();
+    private static final ConfigManager value = FNAmplifications.getInstance().getConfigManager();
 
     private static final int PROGRESS_SLOT = 4;
     private static final int INFO_SLOT = 9;

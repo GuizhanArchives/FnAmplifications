@@ -104,12 +104,6 @@ public class StaffListener implements Listener {
         }
 
         if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfTeleportation) {
-                ((StaffOfTeleportation) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
             if (stick instanceof StaffOfInvisibility) {
                 if (!p.isInvisible()) {
                     ((StaffOfInvisibility) stick).onRightClick(e);

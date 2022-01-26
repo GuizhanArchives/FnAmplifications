@@ -21,7 +21,7 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
-import ne.fnfal113.fnamplifications.ConfigValues.ReturnConfValue;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
@@ -55,7 +55,7 @@ public class ElectricBlockBreaker extends SlimefunItem implements InventoryBlock
     public static final Map<Location, BlockBreakerCache> CACHE_MAP = new HashMap<>();
 
     private static final SlimefunAddon PLUGIN = FNAmplifications.getInstance();
-    private static final ReturnConfValue VALUE = new ReturnConfValue();
+    private static final ConfigManager VALUE = FNAmplifications.getInstance().getConfigManager();
     public static final int CHANGE_MODE = 0;
     public static final int ON_OFF = 8;
     private static final ItemStack VERSIONED_AMETHYST;

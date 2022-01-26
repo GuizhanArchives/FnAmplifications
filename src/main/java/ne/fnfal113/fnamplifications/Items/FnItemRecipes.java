@@ -1,6 +1,6 @@
 package ne.fnfal113.fnamplifications.Items;
 
-import ne.fnfal113.fnamplifications.ConfigValues.ReturnConfValue;
+import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.Machines.ElectricMachineDowngrader;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -17,7 +17,7 @@ import ne.fnfal113.fnamplifications.FNAmplifications;
 public class FnItemRecipes {
 
     private static final SlimefunAddon plugin = FNAmplifications.getInstance();
-    private static final ReturnConfValue value = new ReturnConfValue();
+    private static final ConfigManager value = FNAmplifications.getInstance().getConfigManager();
 
     public static final ItemStack VERSIONED_ITEMSTACK_COPPER;
     public static final ItemStack VERSIONED_ITEMSTACK_COPPER_BATTERY;
