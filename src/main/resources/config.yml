@@ -1,187 +1,233 @@
-# Boolean toggle whether you want to receive new updates everytime your server restart if a new update is released.
-# If set to "false" you will not receive new updates and need to manually update it yourself.
+# 启用自动更新功能
 auto-update: true
 
-# LiteXpansion items (iridium) will be used as recipes for FN PowerXpansion
-# This will only work if LiteXpansion is installed and value is set to true
+# 启用 LiteXpansion 整合
+# LiteXpansion 物品将用于 FN 发电机的配方中
+# 仅在该设置为 true 且服务器已安装 LiteXpansion 时生效
 LiteX-Recipe-Integration: true
 
-# SimpleMaterialGenerators items as some recipes for FN Material Generators
-# Same as above, will only work if SMG is installed and value is set to true
+# 启用 SMG(SimpleMaterialGenerators) 整合
+# SMG 物品将用于 FN 材料发电机的部分配方中
+# 仅在该设置为 true 且服务器已安装 SMG 时生效
 SMG-Recipe-Integration: true
 
-# Use 1.17 items (such as amethyst, copper, calcite, etc) as some recipes for FN Machinery Items
-# This will only work if server is running 1.17 and value is set to true
+# 启用 1.17 整合
+# 使用 1.17 物品作为 FN 机器的配方
+# 仅在该设置为 true 且服务器版本为 1.17 及以上时生效
 New-Recipe-Integration: true
 
-# Armor Effects Update, the time to update the armor effects in seconds (i.e FN Gears of Friction permanent effects)
+# 护甲效果的更新检测间隔 (单位: 秒)
 armor-update-period: 10
 
-# Slimefun Custom addon by FN_FAL113, huge thanks to Walshy and Jeff (LiteXpansion) for letting me use their utils
-# You can change the values here, it requires server restart to take effect.
+##
+## 在下方修改 FN 发电机的相关数值
+## 重启服务器后生效
+##
+## Dayrate: 日间效率 (单位: J/t)
+## NightRate: 夜间效率 (单位: J/t)
+## Output: 意义不明
+## Capacity: 可储存电量 (单位: J)
+##
+## t 为 slimefun tick, 默认情况下:
+## 1 t = 0.5 s
+## 1 J/t = 2 J/s
+##
 
-
-# FN Power Xpansion Rank 1
+# FN 发电机 R1
 FN-Xpansion-Rank1-Dayrate: 236
 FN-Xpansion-Rank1-Nightrate: 138
 FN-Xpansion-Rank1-Output: 20
 FN-Xpansion-Rank1-Capacity: 600000
 
-# FN Power Xpansion Rank 2
+# FN 发电机 R2
 FN-Xpansion-Rank2-Dayrate: 472
 FN-Xpansion-Rank2-Nightrate: 276
 FN-Xpansion-Rank2-Output: 40
 FN-Xpansion-Rank2-Capacity: 700000
 
-# FN Power Xpansion Rank 3
+# FN 发电机 R3
 FN-Xpansion-Rank3-Dayrate: 944
 FN-Xpansion-Rank3-Nightrate: 552
 FN-Xpansion-Rank3-Output: 60
 FN-Xpansion-Rank3-Capacity: 800000
 
-# FN Power Xpansion Rank 4
+# FN 发电机 R4
 FN-Xpansion-Rank4-Dayrate: 1888
 FN-Xpansion-Rank4-Nightrate: 1104
 FN-Xpansion-Rank4-Output: 120
 FN-Xpansion-Rank4-Capacity: 900000
 
-# FN Power Xpansion Rank 5
+# FN 发电机 R5
 FN-Xpansion-Rank5-Dayrate: 3776
 FN-Xpansion-Rank5-Nightrate: 2208
 FN-Xpansion-Rank5-Output: 240
 FN-Xpansion-Rank5-Capacity: 1000000
 
-# FN Power Xpansion Rank 6
+# FN 发电机 R6
 FN-Xpansion-Rank6-Dayrate: 7552
 FN-Xpansion-Rank6-Nightrate: 4416
 FN-Xpansion-Rank6-Output: 480
 FN-Xpansion-Rank6-Capacity: 1500000
 
-# FN Power Xpansion Rank 7
+# FN 发电机 R7
 FN-Xpansion-Rank7-Dayrate: 15104
 FN-Xpansion-Rank7-Nightrate: 8832
 FN-Xpansion-Rank7-Output: 960
 FN-Xpansion-Rank7-Capacity: 2000000
 
-# FN Power Xpansion Rank 8
+# FN 发电机 R8
 FN-Xpansion-Rank8-Dayrate: 18880
 FN-Xpansion-Rank8-Nightrate: 11040
 FN-Xpansion-Rank8-Output: 1200
 FN-Xpansion-Rank8-Capacity: 3000000
 
-# FN Power Xpansion Rank 9
+# FN 发电机 R9
 FN-Xpansion-Rank9-Dayrate: 22656
 FN-Xpansion-Rank9-Nightrate: 13248
 FN-Xpansion-Rank9-Output: 1440
 FN-Xpansion-Rank9-Capacity: 4500000
 
-# FN Power Xpansion Rank 10
+# FN 发电机 R10
 FN-Xpansion-Rank10-Dayrate: 26432
 FN-Xpansion-Rank10-Nightrate: 15456
 FN-Xpansion-Rank10-Output: 1680
 FN-Xpansion-Rank10-Capacity: 6750000
 
-# FN Power Xpansion Rank 11
+# FN 发电机 R11
 FN-Xpansion-Rank11-Dayrate: 30208
 FN-Xpansion-Rank11-Nightrate: 17664
 FN-Xpansion-Rank11-Output: 1920
 FN-Xpansion-Rank11-Capacity: 9000000
 
-# FN Power Xpansion Rank 12
+# FN 发电机 R12
 FN-Xpansion-Rank12-Dayrate: 45312
 FN-Xpansion-Rank12-Nightrate: 26496
 FN-Xpansion-Rank12-Output: 2880
 FN-Xpansion-Rank12-Capacity: 12000000
 
+##
+## 在下方修改材料生成器的生成间隔
+## 即每过多少tick生成1个产物
+## 重启服务器后生效
+##
+## 单位: t
+##
+## t 为 slimefun tick, 默认情况下:
+## 1 t = 0.5 s
+## 1 J/t = 2 J/s
+##
 
-# This is where you can configure tick rates for each Material Generator
-# This is a custom addon for slimefun by FN_FAL113 based on SMG addon by waleks (addon dev)
-
-# Rate for Clay Generator
+# 粘土
 FN_CLAY-TickRate: 32
 
-# Rate for Warp Nylium Generator
+# 诡异菌岩
 FN_WARPED_NYLIUM-TickRate: 48
 
-# Rate for Terracotta Generator
+# 陶瓦
 FN_TERRACOTTA-TickRate: 84
 
-# Rate for Bone Generator
+# 骨头
 FN_BONE-TickRate: 256
 
-# Rate for Diamond Generator
+# 钻石
 FN_DIAMOND-TickRate: 192
 
-# Rate for Emerald Generator
+# 绿宝石
 FN_EMERALD-TickRate: 218
 
-# Rate for Dirt Generator
+# 泥土
 FN_Dirt-TickRate: 36
 
-# Rate for Honey Comb Generator
+# 蜜脾
 FN_HONEYCOMB-TickRate: 52
 
 
-# Tick based power is multiplied by 2, The value here is in Seconds and will be converted in ticks in game. Ticks is slower than per seconds
-# Buffer is the actual capacity that the solar generator can store
-# This is a Custom Slimefun Addon by FN_FAL113
-# Change Lore if you intend to make the generator work at Night by changing the values of 'Tier#-power#-night:'
+##
+## 在下方修改太阳能发电机组的相关数值
+## 重启服务器后生效
+##
+## power: 日间效率 (单位: J/t)
+## power-night: 夜间效率 (单位: J/t)
+## buffer: 可存储电量 (单位: J)
+## lore: 物品描述 (如果你启用了夜间发电，你可以修改这里的描述)
+##
+## t 为 slimefun tick, 默认情况下:
+## 1 t = 0.5 s
+## 1 J/t = 2 J/s
+##
 
-# Power settings for FN Solar Gen Tier I
+# FN太阳能发电机组 I
 Tier1-power1: 512
 Tier1-power1-night: 0
 Buffer1: 2048
-Tier1-Lore: "&eGenerator works during Day only"
+Tier1-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier III
+# FN太阳能发电机组 II
 Tier2-power2: 1024
 Tier2-power2-night: 0
 Buffer2: 4096
-Tier2-Lore: "&eGenerator works during Day only"
+Tier2-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier III
+# FN太阳能发电机组 III
 Tier3-power3: 2048
 Tier3-power3-night: 0
 Buffer3: 6144
-Tier3-Lore: "&eGenerator works during Day only"
+Tier3-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier IV
+# FN太阳能发电机组 IV
 Tier4-power4: 4096
 Tier4-power4-night: 0
 Buffer4: 12288
-Tier4-Lore: "&eGenerator works during Day only"
+Tier4-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier V
+# FN太阳能发电机组 V
 Tier5-power5: 6144
 Tier5-power5-night: 0
 Buffer5: 24576
-Tier5-Lore: "&eGenerator works during Day only"
+Tier5-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier VI
+# FN太阳能发电机组 VI
 Tier6-power6: 8192
 Tier6-power6-night: 0
 Buffer6: 49152
-Tier6-Lore: "&eGenerator works during Day only"
+Tier6-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier VI
+# FN太阳能发电机组 VII
 Tier7-power7: 10240
 Tier7-power7-night: 0
 Buffer7: 98304
-Tier7-Lore: "&eGenerator works during Day only"
+Tier7-Lore: "&e仅在日间工作"
 
-# Power settings for FN Solar Gen Tier VI
+# FN太阳能发电机组 VIII
 Tier8-power8: 12288
 Tier8-power8-night: 0
 Buffer8: 196608
-Tier8-Lore: "&eGenerator works during Day only"
+Tier8-Lore: "&e仅在日间工作"
 
-# Tick rate settings for the Electric Block Breaker
-# Lower ticks the faster it breaks a block
+
+##
+## 在下方修改电动方块挖掘机的挖掘间隔
+## 即每过多少tick挖掘一次
+## 重启服务器后生效
+##
+## 单位: t
+##
+## t 为 slimefun tick, 默认情况下:
+## 1 t = 0.5 s
+## 1 J/t = 2 J/s
+##
+
 E-block-breaker1-tickRate: 12
 E-block-breaker2-tickRate: 6
 E-block-breaker3-tickRate: 2
 
-# Modify here the Staff max uses value
+
+##
+## 在下方修改法杖的最大使用次数
+## 仅对新制作的法杖有效，不会影响已制作的法杖
+## 重启服务器后生效
+##
+
 Staff-of-Locomotion: 10
 Staff-of-Invisibility: 10
 Staff-of-Teleportation: 10
