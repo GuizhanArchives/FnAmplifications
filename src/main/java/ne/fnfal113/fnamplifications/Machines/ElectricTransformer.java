@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -41,10 +42,16 @@ public class ElectricTransformer extends AContainer implements RecipeDisplayItem
         for (MachineRecipe recipe : recipes) {
             displayRecipes.add(recipe.getInput()[0]);
             displayRecipes.add(recipe.getInput()[1]);
-            displayRecipes.add(new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, "&e提示", "&f下面的箭头指向两个垂直输入的输出"));
-            displayRecipes.add(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-                    "682ad1b9cb4dd21259c0d75aa315ff389c3cef752be3949338164bac84a96e")));
-            displayRecipes.add(new CustomItemStack(Material.PINK_STAINED_GLASS_PANE, "&e提示", "&f两个垂直方向的物品是输入", "&f该提示下方的物品是输出"));
+            displayRecipes.add(ChestMenuUtils.getBackground());
+            displayRecipes.add(new CustomItemStack(
+                PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "682ad1b9cb4dd21259c0d75aa315ff389c3cef752be3949338164bac84a96e"
+                )),
+                "&e配方展示",
+                "&b左列为输入物品",
+                "&b右列为输出物品"
+            ));
+            displayRecipes.add(ChestMenuUtils.getBackground());
             displayRecipes.add(recipe.getOutput()[0]);
         }
 

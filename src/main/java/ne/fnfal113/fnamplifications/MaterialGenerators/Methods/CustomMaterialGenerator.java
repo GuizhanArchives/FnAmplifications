@@ -41,8 +41,8 @@ public class CustomMaterialGenerator extends SlimefunItem implements InventoryBl
     private static final Map<BlockPosition, Integer> generatorProgress = new HashMap<>();
 
     private static final CustomItemStack notGenerating = new CustomItemStack(Material.RED_STAINED_GLASS_PANE,
-            "&c尚未运行",
-            "&e请先在材料发生器上方放置一个箱子!"
+            "&c未运行",
+            "&e需要在材料生成器上方放置一个箱子!"
     );
 
     private int rate = 2;
@@ -91,8 +91,8 @@ public class CustomMaterialGenerator extends SlimefunItem implements InventoryBl
                     int progress = generatorProgress.getOrDefault(pos, 0);
 
                     if (invMenu.toInventory() != null && !invMenu.toInventory().getViewers().isEmpty()) {
-                        invMenu.replaceExistingItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&a材料发生器",
-                                "", "&b材料: " + this.material, "&b速率: " + "" + ChatColor.GREEN + this.rate + " &at", "", "&2等级: " + progress
+                        invMenu.replaceExistingItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&a材料生成器",
+                                "", "&b材料: " + this.material, "&b生成间隔: " + "" + ChatColor.GREEN + this.rate + " &at", "", "&2进度: " + progress
                                 + "/"+ this.rate));
                     }
 

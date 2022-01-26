@@ -50,35 +50,50 @@ public class PowahGenerator extends SlimefunItem implements InventoryBlock, Ener
     private static final int FN_5 = 15;
 
     private static final CustomItemStack generatingItem = new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
-            "&c尚未运行"
+        "&c尚未运行"
     );
 
     private static final CustomItemStack addonBy = new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
-            "&d&l作者:FN_FAL113"
+        "&d&l作者: FN_FAL113"
     );
 
     private static final CustomItemStack creditsTo = new CustomItemStack(Material.PINK_STAINED_GLASS_PANE,
-            "&e鸣谢Jeff(LiteXpansion)和 Walshy(SF dev)"
+        "&e鸣谢 Jeff(LiteXpansion) 和 Walshy(Slimefun)"
     );
 
-    private static final CustomItemStack F = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "8442b066e0e5e09a6e6bb9989cc27451f2bd78fb0dc72108aa940fc9db1c24e1"))
+    private static final CustomItemStack F = new CustomItemStack(
+        PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+            "8442b066e0e5e09a6e6bb9989cc27451f2bd78fb0dc72108aa940fc9db1c24e1"
+        )),
+        "F"
     );
 
-    private static final CustomItemStack N = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "e713d2601e35242d35018cece3b34c61bf5001f5dbd7463a4c5587ac365b3d1f"))
+    private static final CustomItemStack N = new CustomItemStack(
+        PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+            "e713d2601e35242d35018cece3b34c61bf5001f5dbd7463a4c5587ac365b3d1f"
+        )),
+        "N"
     );
 
-    private static final CustomItemStack F2 = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "8442b066e0e5e09a6e6bb9989cc27451f2bd78fb0dc72108aa940fc9db1c24e1"))
+    private static final CustomItemStack F2 = new CustomItemStack(
+        PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+            "8442b066e0e5e09a6e6bb9989cc27451f2bd78fb0dc72108aa940fc9db1c24e1"
+        )),
+        "F"
     );
 
-    private static final CustomItemStack A = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "a517b4829b83192bd72711277a8efc4196711e4180c22b3e2b8166bea1a9de19"))
+    private static final CustomItemStack A = new CustomItemStack(
+        PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+            "a517b4829b83192bd72711277a8efc4196711e4180c22b3e2b8166bea1a9de19"
+        )),
+        "A"
     );
 
-    private static final CustomItemStack L = new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-            "206bc417e3c06b22735d539f9c6c8fd7c1efd19236e2c381534051d9d6bee804"))
+    private static final CustomItemStack L = new CustomItemStack(
+        PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+            "206bc417e3c06b22735d539f9c6c8fd7c1efd19236e2c381534051d9d6bee804"
+        )),
+        "L"
     );
 
     public static final int FN_POWERGEN_RANK_I_DAYRATE = value.rank1dayrate();
@@ -135,7 +150,7 @@ public class PowahGenerator extends SlimefunItem implements InventoryBlock, Ener
         super(FNAmpItems.POWER_GENERATORS, type.getItem(), FnAssemblyStation.RECIPE_TYPE, type.getRecipe());
         this.type = type;
 
-        createPreset(this, type.getItem().getItemMetaSnapshot().getDisplayName().orElse("&eFN功率拓展"),
+        createPreset(this, type.getItem().getItemMetaSnapshot().getDisplayName().orElse("&eFN发电机"),
                 blockMenuPreset -> {
                     for (int i = 0; i < 18; i++) {
                         blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
@@ -166,26 +181,26 @@ public class PowahGenerator extends SlimefunItem implements InventoryBlock, Ener
         String generationType = "&4未知";
 
         if (l.getWorld().getEnvironment() == World.Environment.NETHER) {
-            generationType = "&c下界 &e(白天)";
+            generationType = "&c下界 &e(日间)";
         } else if (l.getWorld().getEnvironment() == World.Environment.THE_END) {
-            generationType = "&5末地 &8(黑夜)";
+            generationType = "&5末地 &8(夜间)";
         } else if (rate == this.type.getDayGenerationRate()) {
-            generationType = "&a主世界 &e(白天)";
+            generationType = "&a主世界 &e(日间)";
         } else if (rate == this.type.getNightGenerationRate()) {
-            generationType = "&a主世界 &8(黑夜)";
+            generationType = "&a主世界 &8(夜间)";
         }
 
         if (inv.toInventory() != null && !inv.toInventory().getViewers().isEmpty()) {
             inv.replaceExistingItem(PROGRESS_SLOT,
                     canGenerate ? new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&a运行中",
-                            "", "&b速率类型: " + generationType,
-                            "&7发电量 &6" + Utils.powerFormatAndFadeDecimals(Utils.perTickToPerSecond(rate)) + " J/s " +
+                            "", "&b类型: " + generationType,
+                            "&7速度: &6" + Utils.powerFormatAndFadeDecimals(Utils.perTickToPerSecond(rate)) + " J/s " +
                                     "&8(" + rate + " J/t)",
-                            "", "&7储电量: &6" + Utils.powerFormatAndFadeDecimals((double) stored + rate) + " J"
+                            "", "&7已储存: &6" + Utils.powerFormatAndFadeDecimals((double) stored + rate) + " J"
                     )
-                            : new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE, "&c尚未运行",
+                            : new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE, "&c未运行",
                             "", "&7发电机已达最大容量",
-                            "", "&7储电量: &6" + Utils.powerFormatAndFadeDecimals(stored) + " J")
+                            "", "&7已储存: &6" + Utils.powerFormatAndFadeDecimals(stored) + " J")
             );
         }
         return rate;

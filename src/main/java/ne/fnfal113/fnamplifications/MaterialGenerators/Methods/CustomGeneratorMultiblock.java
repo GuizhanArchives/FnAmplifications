@@ -19,7 +19,7 @@ public class CustomGeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler
         super(itemGroup, item, RecipeType.MULTIBLOCK, new ItemStack[] {
                 null, null, null,
                 null, new ItemStack(Material.CHEST), null,
-                null, new CustomItemStack(Material.DIAMOND_BLOCK, "FN材料发生器"), null
+                null, new CustomItemStack(Material.DIAMOND_BLOCK, "&f任意FN材料生成器"), null
         });
     }
 
@@ -28,7 +28,7 @@ public class CustomGeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler
     public ItemUseHandler getItemHandler() {
         return e -> {
             e.cancel();
-            e.getPlayer().sendMessage("这件物品只是一个示例，你需要放下真正的材料发生器");
+            e.getPlayer().sendMessage("这只是个示例物品，你需要按照配方展示的方式放置对应方块");
         };
     }
 }
