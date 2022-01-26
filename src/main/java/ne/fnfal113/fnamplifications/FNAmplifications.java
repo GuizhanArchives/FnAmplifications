@@ -26,11 +26,11 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
         new Metrics(this, 13219);
 
         getLogger().info("************************************************************");
-        getLogger().info("*         FN Amplifications - Created by FN_FAL113         *");
-        getLogger().info("* Credits to Jeff(LiteXpansion) and Walshy(SF) for letting *");
-        getLogger().info("*            me use their utils and resources              *");
-        getLogger().info("*         Add me on discord if there are any issues        *");
-        getLogger().info("*                       FN_FAL#7779                        *");
+        getLogger().info("              FN Amplifications - FN 科技                   ");
+        getLogger().info("           作者: FN_FAL113  汉化: haiman233, ybw0014         ");
+        getLogger().info("    感谢 Jeff(LiteXpansion) 与 Walshy(Slimefun) 提供的工具包   ");
+        getLogger().info("               如有任何问题，请前往问题追踪器汇报                 ");
+        getLogger().info("                作者 Discord: FN_FAL#7779                    ");
         getLogger().info("************************************************************");
 
         FNAmpItemSetup.INSTANCE.init();
@@ -57,7 +57,7 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/FN-FAL113/FN-FAL-s-Amplifications/issues";
+        return "https://github.com/ybw0014/FNAmplifications/issues";
     }
 
     private static void setInstance(FNAmplifications ins) {

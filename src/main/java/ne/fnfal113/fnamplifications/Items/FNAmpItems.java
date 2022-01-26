@@ -63,13 +63,13 @@ public class FNAmpItems {
             FN_ITEMS,
             new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "ecb316f7a227a8c59d58ae0dd6768fe4fa546d55b9cfdd56cfe40b6586d81c24")),
-            "&eFN功率拓展"));
+            "&eFN发电机"));
 
     public static final SubItemGroup MATERIAL_GENERATORS = new SubItemGroup(
             new NamespacedKey(FNAmplifications.getInstance(), "MATERIAL_GENERATORS"),
             FN_ITEMS,
             new CustomItemStack(Material.EMERALD_BLOCK,
-            "&eFN材料发生器"));
+            "&eFN材料生成器"));
 
     public static final SubItemGroup SOLAR_GENERATORS = new SubItemGroup(
             new NamespacedKey(FNAmplifications.getInstance(), "SOLAR_GENERATORS"),
@@ -140,320 +140,344 @@ public class FNAmpItems {
             "FN_POWER_XPANSION_POWER_R1",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "33165e254de7863459343543f933481f0dcf8d4730a23433b9a7ff0d3ff79c5a")),
-            "&d&lFN功率拓展 R1",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R1",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_I_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_I_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_I_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_I_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_I_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R2 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R2",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "5b78e55e3ea6b3682bd7cead43eb1c91b2527a81aa2894f095801f6ee47a3")),
-            "&d&lFN功率拓展 R2",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R2",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_II_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_II_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_II_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_II_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_II_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R3 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R3",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "45ff60d863d1cf76742f275e2ac5749dd0a978a231d3c51e816132c75aef608a")),
-            "&d&lFN功率拓展 R3",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R3",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_III_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_III_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_III_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_III_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_III_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R4 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R4",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "efc05af0e88c6fb10b4c8c8b81b7aa658e64649724cb73bb9bb0f25f28bd")),
-            "&d&lFN功率拓展 R4",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R4",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_IV_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IV_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IV_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IV_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IV_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R5 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R5",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "8f14f3179b86f69b3efa7472dacaeb2339f6290d2d817362793348abd98e021")),
-            "&d&lFN功率拓展 R5",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R5",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_V_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_V_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_V_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_V_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_V_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R6 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R6",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "1d5a09884cb83ef5c908dddd385f246fefdee221712c010177f54376da238fdd")),
-            "&d&lFN功率拓展 R6",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R6",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_VI_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VI_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VI_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VI_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VI_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R7 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R7",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "f7e541dfb4ba1f7dc28b548e347abbdc987ebe0e61c49fa87111ef1b2dcb2218")),
-            "&d&lFN功率拓展 R7",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R7",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_VII_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VII_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VII_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VII_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VII_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R8 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R8",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "de31efefdd9551af8a4349d3d21e5ec8f37e53c801eb25b14279d6a89fe0c01e")),
-            "&d&lFN功率拓展 R8",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R8",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_VIII_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VIII_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VIII_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VIII_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_VIII_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R9 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R9",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "6db32b15d7f32704ed626fa52d06fb2b4071d336fdbfe61e6e41c669d6e37f47")),
-            "&d&lFN功率拓展 R9",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R9",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_IX_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IX_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IX_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IX_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_IX_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R10 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R10",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "56a7d2195ff7674bbb12e2f7578a2a63c54a980e64744450ac6656e05a790499")),
-            "&d&lFN功率拓展 R10",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R10",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_X_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_X_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_X_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_X_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_X_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R11 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R11",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "7f9f356f5fe7d1bc92cddfaeba3ee773ac9df1cc4d1c2f8fe5f47013032c551d")),
-            "&d&lFN功率拓展 R11",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R11",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_XI_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XI_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XI_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XI_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XI_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FN_XPANSION_POWER_R12 = new SlimefunItemStack(
             "FN_POWER_XPANSION_POWER_R12",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "3464874df452c1d717eddd0fb3b848202ad15571245af6fade2ecf514f3c80bb")),
-            "&d&lFN功率拓展 R12",
-            "&9仅在晚上工作!",
-            "&9放置并右击该方块",
-            "&9以获取功率信息",
+            "&d&lFN发电机 R12",
+            "",
+            "&9可在夜间工作",
+            "",
+            "&7放置并右键点击该方块",
+            "&7以获取功率信息",
             "",
             LoreBuilderDynamic.powerBuffer(PowahGenerator.FN_POWERGEN_RANK_XII_STORAGE),
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XII_DAYRATE) + " (Day Rate)",
-            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XII_NIGHTRATE) + " (Night Rate)"
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XII_DAYRATE) + " (日间)",
+            LoreBuilderDynamic.powerPerTick(PowahGenerator.FN_POWERGEN_RANK_XII_NIGHTRATE) + " (夜间)"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_MULTIBLOCK = new SlimefunItemStack(
             "FMG_GENERATOR_MULTIBLOCK",
             Material.BEDROCK,
-            "&9方块发生器",
+            "&9FN材料生成器",
             "",
-            "&d在方块发生器上",
-            "&d放置一个箱子",
-            "&a即可自动生产对应物品"
+            "&a在任意FN材料生成器上",
+            "&a放置一个箱子",
+            "&a即可开始生产"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_CLAY_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_CLAY_BROKEN",
             Material.CLAY,
-            "&3FN粘土发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&3FN粘土生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static SlimefunItemStack FMG_GENERATOR_FNFAL_CLAY = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_CLAY",
             Material.CLAY,
-            "&3FN粘土发生器",
-            "&6自动生产粘土",
-            ""
+            "&3FN粘土生成器",
+            "",
+            "&6自动生产粘土"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_WARPED_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_WARPED_BROKEN",
             Material.WARPED_NYLIUM,
-            "&4FN诡异菌岩发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&4FN诡异菌岩生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_WARPED1 = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_WARPED1",
             Material.WARPED_NYLIUM,
-            "&4FN诡异菌岩发生器",
-            "&6自动生产诡异菌岩",
-            ""
+            "&4FN诡异菌岩生成器",
+            "",
+            "&6自动生产诡异菌岩"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_TERRACOTTA_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_TERRACOTTA_BROKEN",
             Material.TERRACOTTA,
-            "&4FN陶瓦发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&4FN陶瓦生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_TERRACOTTA = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_TERRACOTTA",
             Material.TERRACOTTA,
-            "&4FN陶瓦发生器",
-            "&6自动生产陶瓦",
-            ""
+            "&4FN陶瓦生成器",
+            "",
+            "&6自动生产陶瓦"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_BONE_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_BONE_BROKEN",
             Material.BONE_BLOCK,
-            "&fFN骨头发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&fFN骨头生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_BONE = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_BONE",
             Material.BONE_BLOCK,
-            "&fFN骨头发生器",
-            "&6自动生产骨头",
-            ""
+            "&fFN骨头生成器",
+            "",
+            "&6自动生产骨头"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_DIAMOND_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_DIAMOND_BROKEN",
             Material.DIAMOND_BLOCK,
-            "&bFN_FAL钻石发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&bFN_FAL钻石生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_DIAMOND = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_DIAMOND",
             Material.DIAMOND_BLOCK,
-            "&bFN钻石发生器",
-            "&6自动生产钻石",
-            ""
+            "&bFN钻石生成器",
+            "",
+            "&6自动生产钻石"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_EMERALD_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_EMERALD_BROKEN",
             Material.EMERALD_BLOCK,
-            "&aFN绿宝石发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&aFN绿宝石生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_EMERALD = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_EMERALD",
             Material.EMERALD_BLOCK,
-            "&aFN绿宝石发生器",
-            "&6自动生产绿宝石",
-            ""
+            "&aFN绿宝石生成器",
+            "",
+            "&6自动生产绿宝石"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_DIRT_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_DIRT_BROKEN",
             Material.DIRT,
-            "&fFN泥土发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&fFN泥土生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_DIRT = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_DIRT",
             Material.DIRT,
-            "&fFN泥土发生器",
-            "&6自动生产泥土",
-            ""
+            "&fFN泥土生成器",
+            "",
+            "&6自动生产泥土"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_HONEYCOMB_BROKEN = new SlimefunItemStack(
             "FMG_GENERATOR_HONEYCOMB_BROKEN",
             Material.HONEYCOMB_BLOCK,
-            "&6FN蜜脾发生器 &8(破损)",
-            "&8需要修复",
-            ""
+            "&6FN蜜脾生成器 &8(破损)",
+            "",
+            "&7需要修复"
     );
 
     public static final SlimefunItemStack FMG_GENERATOR_FNFAL_HONEYCOMB = new SlimefunItemStack(
             "FMG_GENERATOR_FNFAL_HONEYCOMB",
             Material.HONEYCOMB_BLOCK,
-            "&6FN蜜脾发生器",
-            "&6自动生产蜜脾",
-            ""
+            "&6FN蜜脾生成器",
+            "",
+            "&6自动生产蜜脾"
     );
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER1 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER1",
             "6d2822cedb3abd579d6dfa2966c1433c3c36cb9732e2c23ec0cc81daedd4403b",
-            "&dFN太阳能发电机组  I",
+            "&dFN太阳能发电机组 I",
             "",
             "&e为你提供基础电力",
             value.tier1Lore(),
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier1Buffer()),
-            LoreBuilder.powerPerSecond(value.tier1Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier1PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier1Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier1PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER2 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER2",
@@ -465,8 +489,8 @@ public class FNAmpItems {
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier2Buffer()),
-            LoreBuilder.powerPerSecond(value.tier2Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier2PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier2Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier2PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER3 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER3",
@@ -478,8 +502,8 @@ public class FNAmpItems {
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier3Buffer()),
-            LoreBuilder.powerPerSecond(value.tier3Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier3PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier3Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier3PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER4 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER4",
@@ -491,8 +515,8 @@ public class FNAmpItems {
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier4Buffer()),
-            LoreBuilder.powerPerSecond(value.tier4Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier4PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier4Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier4PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER5 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER5",
@@ -504,8 +528,8 @@ public class FNAmpItems {
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier5Buffer()),
-            LoreBuilder.powerPerSecond(value.tier5Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier5PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier5Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier5PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER6 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER6",
@@ -517,49 +541,54 @@ public class FNAmpItems {
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier6Buffer()),
-            LoreBuilder.powerPerSecond(value.tier6Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier6PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier6Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier6PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER7 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER7",
             "c4fe135c311f7086edcc5e6dbc4ef4b23f819fddaa42f827dac46e3574de2287",
             "&dFN太阳能发电机组 VII",
-            "", "&e为你提供基础电力r",
+            "",
+            "&e为你提供基础电力",
             value.tier7Lore(),
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier7Buffer()),
-            LoreBuilder.powerPerSecond(value.tier7Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier7PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier7Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier7PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_GENERATOR_TIER8 = new SlimefunItemStack(
             "FN_FAL_GENERATOR_TIER8",
             "240775c3ad75763613f32f04986881bbe4eee4366d0c57f17f7c7514e2d0a77d",
             "&dFN太阳能发电机组 VIII",
-            "", "&e为你提供基础电力",
+            "",
+            "&e为你提供基础电力",
             value.tier8Lore(),
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
             LoreBuilder.powerBuffer(value.tier8Buffer()),
-            LoreBuilder.powerPerSecond(value.tier8Power() * 2) + " (Day)",
-            LoreBuilder.powerPerSecond(value.tier8PowerNight() * 2) + " (Night)");
+            LoreBuilder.powerPerSecond(value.tier8Power() * 2) + " (日间)",
+            LoreBuilder.powerPerSecond(value.tier8PowerNight() * 2) + " (夜间)");
 
     public static final SlimefunItemStack FN_FAL_TRANSFORMER_1 = new SlimefunItemStack(
             "FN_FAL_TRANSFORMER_1",
             Material.BLUE_GLAZED_TERRACOTTA,
-            "&dFN变压机 I",
-            "", "&e当你输入一定材料时",
-            "&e它会自动利用这些材料为你的机器/物品升级",
+            "&dFN转换器 I",
             "",
-             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+            "&e使用一些材料",
+            "&e来快速升级机器/物品",
+            "",
+            LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(1),
             LoreBuilder.powerPerSecond(256));
 
     public static final SlimefunItemStack FN_FAL_TRANSFORMER_2 = new SlimefunItemStack(
             "FN_FAL_TRANSFORMER_2",
-            Material.BLUE_GLAZED_TERRACOTTA, "&dFN变压机 II",
-            "", "&e当你输入一定材料时",
-            "&e它会自动利用这些材料为你的机器/物品升级",
+            Material.BLUE_GLAZED_TERRACOTTA,
+            "&dFN转换器 II",
+            "",
+            "&e使用一些材料",
+            "&e来快速升级机器/物品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -567,9 +596,11 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_TRANSFORMER_3 = new SlimefunItemStack(
             "FN_FAL_TRANSFORMER_3",
-            Material.BLUE_GLAZED_TERRACOTTA, "&dFN变压机 III",
-            "", "&e当你输入一定材料时",
-            "&e它会自动利用这些材料为你的机器/物品升级",
+            Material.BLUE_GLAZED_TERRACOTTA,
+            "&dFN转换器 III",
+            "",
+            "&e使用一些材料",
+            "&e来快速升级机器/物品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(4),
@@ -577,8 +608,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_COMPRESSOR_1 = new SlimefunItemStack(
             "FN_FAL_COMPRESSOR_1",
-            Material.GREEN_GLAZED_TERRACOTTA, "&dFN液压机 I",
-            "", "&e它可以自动压缩一些特定物品",
+            Material.GREEN_GLAZED_TERRACOTTA,
+            "&dFN液压机 I",
+            "",
+            "&e它可以自动压缩一些特定物品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(1),
@@ -586,8 +619,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_COMPRESSOR_2 = new SlimefunItemStack(
             "FN_FAL_COMPRESSOR_2",
-            Material.GREEN_GLAZED_TERRACOTTA, "&dFN液压机 II",
-            "", "&e它可以自动压缩一些特定物品",
+            Material.GREEN_GLAZED_TERRACOTTA,
+            "&dFN液压机 II",
+            "",
+            "&e它可以自动压缩一些特定物品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -595,8 +630,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_COMPRESSOR_3 = new SlimefunItemStack(
             "FN_FAL_COMPRESSOR_3",
-            Material.GREEN_GLAZED_TERRACOTTA, "&dFN液压机 III",
-            "", "&e它可以自动压缩一些特定物品",
+            Material.GREEN_GLAZED_TERRACOTTA,
+            "&dFN液压机 III",
+            "",
+            "&e它可以自动压缩一些特定物品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(4),
@@ -604,8 +641,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_CONDENSER_1 = new SlimefunItemStack(
             "FN_FAL_CONDENSER_1",
-            Material.YELLOW_STAINED_GLASS, "&dFN电锭冷凝机 I",
-            "", "&e它可以将两种材料熔融混合",
+            Material.YELLOW_STAINED_GLASS,
+            "&dFN电锭冷凝机 I",
+            "",
+            "&e它可以将两种材料熔融混合",
             "&e并冷凝成新的材料",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
@@ -614,8 +653,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_CONDENSER_2 = new SlimefunItemStack(
             "FN_FAL_CONDENSER_2",
-            Material.YELLOW_STAINED_GLASS, "&dFN电锭冷凝机 II",
-            "", "&e它可以将两种材料熔融混合",
+            Material.YELLOW_STAINED_GLASS,
+            "&dFN电锭冷凝机 II",
+            "",
+            "&e它可以将两种材料熔融混合",
             "&e并冷凝成新的材料",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
@@ -624,8 +665,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_CONDENSER_3 = new SlimefunItemStack(
             "FN_FAL_CONDENSER_3",
-            Material.YELLOW_STAINED_GLASS, "&dFN电锭冷凝机 III",
-            "", "&e它可以将两种材料熔融混合",
+            Material.YELLOW_STAINED_GLASS,
+            "&dFN电锭冷凝机 III",
+            "",
+            "&e它可以将两种材料熔融混合",
             "&e并冷凝成新的材料",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
@@ -634,8 +677,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_RECYCLER_1 = new SlimefunItemStack(
             "FN_FAL_RECYCLER_1",
-            Material.PURPLE_STAINED_GLASS, "&dFN电动回收机 I",
-            "", "&e它可以将物品回收成低一级的产品",
+            Material.PURPLE_STAINED_GLASS,
+            "&dFN电动回收机 I",
+            "",
+            "&e它可以将物品回收成低一级的产品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(1),
@@ -643,8 +688,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_RECYCLER_2 = new SlimefunItemStack(
             "FN_FAL_RECYCLER_2",
-            Material.PURPLE_STAINED_GLASS, "&dFN电动回收机 II",
-            "", "&e它可以将物品回收成低一级的产品",
+            Material.PURPLE_STAINED_GLASS,
+            "&dFN电动回收机 II",
+            "",
+            "&e它可以将物品回收成低一级的产品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -652,8 +699,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_RECYCLER_3 = new SlimefunItemStack(
             "FN_FAL_RECYCLER_3",
-            Material.PURPLE_STAINED_GLASS, "&dFN电动回收机 III",
-            "", "&e它可以将物品回收成低一级的产品",
+            Material.PURPLE_STAINED_GLASS,
+            "&dFN电动回收机 III",
+            "",
+            "&e它可以将物品回收成低一级的产品",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(2),
@@ -661,8 +710,10 @@ public class FNAmpItems {
 
     public static final SlimefunItemStack FN_FAL_DOWNGRADER = new SlimefunItemStack(
             "FN_FAL_DOWNGRADER",
-            Material.WHITE_GLAZED_TERRACOTTA, "&d电机降级器",
-            "", "&e一种可以使粘液机器降级的机器",
+            Material.WHITE_GLAZED_TERRACOTTA,
+            "&d电机降级器",
+            "",
+            "&e一种可以使粘液机器降级的机器",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(4),
@@ -672,198 +723,238 @@ public class FNAmpItems {
             "FN_MACHINERY_MACHINE_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("6ddd4a12da1cc2c9f9d6cd49fc778e3a11f3757de6dd312d70a0d47885189c0")),
             "&d机器零件",
-            "&f用于制作FN机器",
             "",
-            "&d&oFN Machinery Items");
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack MACHINE_PART_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_MACHINE_PART_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("6ddd4a12da1cc2c9f9d6cd49fc778e3a11f3757de6dd312d70a0d47885189c0")),
             "&d机器零件",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack COMPONENT_PART = new SlimefunItemStack(
             "FN_MACHINERY_COMPONENT_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("74657e89167b17ed581e87ce4215ce8d47145ab34038202d5ccefb0a9bd0d8f4")),
             "&d散热器",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack COMPONENT_PART_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_COMPONENT_PART_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("74657e89167b17ed581e87ce4215ce8d47145ab34038202d5ccefb0a9bd0d8f4")),
             "&d散热器",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack MOTOR_SWITCH = new SlimefunItemStack(
             "FN_MACHINERY_MOTOR_SWITCH",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("48748ce96cedbfecaa463966d8fb1ac83c408feea89bd60d76d6024d3befe")),
             "&d马达开关",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack MOTOR_SWITCH_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_MOTOR_SWITCH_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("48748ce96cedbfecaa463966d8fb1ac83c408feea89bd60d76d6024d3befe")),
             "&d马达开关",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack POWER_COMPONENT = new SlimefunItemStack(
             "FN_MACHINERY_POWER_COMPONENT",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("25ba8456e92f0790222c19c06f61180a195af1008569ed352b93a3c6d9ec7a98")),
             "&d电源组件",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack POWER_COMPONENT_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_POWER_COMPONENT_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("25ba8456e92f0790222c19c06f61180a195af1008569ed352b93a3c6d9ec7a98")),
             "&d电源组件",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack GEAR_PART = new SlimefunItemStack(
             "FN_MACHINERY_GEAR_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("faf0c95ceba34c7fe6d33404feb87b4184ccce143978622c1647feaed2b63274")),
             "&d齿轮",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack GEAR_PART_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_GEAR_PART_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("faf0c95ceba34c7fe6d33404feb87b4184ccce143978622c1647feaed2b63274")),
             "&d齿轮",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack THREAD_PART = new SlimefunItemStack(
             "FN_MACHINERY_THREAD_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("87ec65d6649ac1bf7b282575cef299f8601e51d8418d6e546e4fc71b218f7")),
             "&d镶件螺纹",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack THREAD_PART_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_THREAD_PART_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("87ec65d6649ac1bf7b282575cef299f8601e51d8418d6e546e4fc71b218f7")),
             "&d镶件螺纹",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack COMPRESSOR_PART = new SlimefunItemStack(
             "FN_MACHINERY_COMPRESSOR_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("e48337f7ede15c3b2f8dc6a63bd92874cdf74ec862b4118c7e35559ce8b4d")),
             "&d压缩零件",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack CONDENSER_PART = new SlimefunItemStack(
             "FN_MACHINERY_CONDENSER_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("63be652b2e1b93ed8e93b427de455d446582e6c8d929f8fc96ac488a8f7f53")),
             "&d冷凝器",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack RECYCLER_PART = new SlimefunItemStack(
             "FN_MACHINERY_RECYCLER_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("4817fc8e16b8e994efb908b71acd1d1352ca5aefa09fecc9339ebea450d83fb8")),
             "&d回收器",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack DOWNGRADER_PART = new SlimefunItemStack(
             "FN_MACHINERY_DOWNGRADER_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("a44c5ce2eb643f8671c667e8802c9317ad8cc6af680d4ef671d8c0c63277900a")),
             "&d降级器",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack FUNNEL_PART = new SlimefunItemStack(
             "FN_MACHINERY_FUNNEL_PART",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("bb2abd66939f4cb7257a88cf52fbc6fdceec1433ec2a6ef16d62e34f6238781")),
             "&d金属漏斗",
-            "&f用于制作FN机器",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack FUNNEL_PART_SCRAP = new SlimefunItemStack(
             "FN_MACHINERY_FUNNEL_PART_SCRAP",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("bb2abd66939f4cb7257a88cf52fbc6fdceec1433ec2a6ef16d62e34f6238781")),
             "&d金属漏斗",
-            "&f用金属废料制成");
+            "",
+            "&f使用金属废料制作",
+            "",
+            "&b合成材料",
+            "");
 
     public static final SlimefunItemStack DIAMOND_PLATING = new SlimefunItemStack(
             "FN_MACHINERY_DIAMOND_PLATING",
             Material.LIGHT_BLUE_CARPET,
             "&d金刚石镀膜",
-            "&f用于制作FN机器和功率拓展"
-            ,
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack ALUMINUM_PLATING = new SlimefunItemStack(
             "FN_MACHINERY_ALUMINUM_PLATING",
             Material.WHITE_CARPET,
             "&d铝镀膜",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack GOLD_PLATING = new SlimefunItemStack(
             "FN_MACHINERY_GOLD_PLATING",
             Material.YELLOW_CARPET,
             "&d黄金镀膜",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack BRASS_PLATING = new SlimefunItemStack(
             "FN_MACHINERY_BRASS_PLATING",
             Material.BROWN_CARPET,
             "&d黄铜镀膜",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack REINFORCED_CASING = new SlimefunItemStack(
             "FN_MACHINERY_REINFORCED_CASING",
             Material.LIGHT_GRAY_CARPET,
             "&d强化合金镀膜",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack BASIC_MACHINE_BLOCK = new SlimefunItemStack(
             "FN_MACHINERY_BASIC_MACHINE_BLOCK",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("883dd0f90df05fe6a09aaccaf54bc043e455e1c865bda1fd272e3f47fb9bb910")),
-            "&d基础机械核心",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "&d基础机器核心",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack HIGHTECH_MACHINE_BLOCK = new SlimefunItemStack(
             "FN_MACHINERY_HIGHTECH_MACHINE_BLOCK",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("5a7b3b16e5d0c4cfd21c4eb9133e969aad7cc7303ccdf317512e26a4879b51")),
-            "&d高能机械核心",
-            "&f用于制作FN机器和功率拓展"
-            , 
+            "&d高科技机器核心",
+            "",
+            "&b合成材料",
             "");
 
     public static final SlimefunItemStack FN_ASSEMBLY_STATION = new SlimefunItemStack(
             "FN_ASSEMBLY_STATION",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("583150f055935058634576185977ffba49ff4679faa03ad0008feaa0161865b3")),
-            "&dFN组装台"
+            "&dFN组装台",
+            "&f在这里制作FN物品"
     );
 
     public static final SlimefunItemStack FN_SCRAP_RECYCLER = new SlimefunItemStack(
             "FN_SCRAP_RECYCLER",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("656634b556caf5382de65038a10e4d79c7c18695048599df74f9c67c1e1e8736")),
-            "&dFN废料回收器"
+            "&dFN废料回收器",
+            "&f使用废料来制作部分零件",
+            "&f可用配方在\"金属废料配方\"页面查看"
     );
 
     public static final SlimefunItemStack FN_METAL_SCRAPS = new SlimefunItemStack(
             "FN_METAL_SCRAPS",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode("3ff0bee591e5f0000ef16f966b949adcb5c2f409a14ccfc5b91222fd925045db")),
             "&d金属废料",
-            "&f电机降级器的副产物"
-            , "&f用于合成机器零件",
+            "",
+            "&f电机降级器的副产物",
+            "&f用于合成机器零件",
             ""
     );
 
@@ -876,7 +967,7 @@ public class FNAmpItems {
             "&6便可自动破坏该方块",
             "&d(原版)",
             "",
-            "&e速率: " + value.blockBreaker1Ticks() + " t",
+            "&e挖掘间隔: " + value.blockBreaker1Ticks() + " t",
             "",
             LoreBuilder.machine(MachineTier.AVERAGE, MachineType.MACHINE),
             LoreBuilder.powerBuffer(512),
@@ -892,7 +983,7 @@ public class FNAmpItems {
             "&6便可自动破坏该方块",
             "&d(原版)",
             "",
-            "&e速率: " + value.blockBreaker2Ticks() + " t",
+            "&e挖掘间隔: " + value.blockBreaker2Ticks() + " t",
             "",
             LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
             LoreBuilder.powerBuffer(1024),
@@ -908,7 +999,7 @@ public class FNAmpItems {
             "&6便可自动破坏该方块",
             "&d(原版)",
             "",
-            "&e挖率: " + value.blockBreaker3Ticks() + " t",
+            "&e挖掘间隔: " + value.blockBreaker3Ticks() + " t",
             "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.powerBuffer(2048),
@@ -1070,34 +1161,34 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_TP = new SlimefunItemStack(
             "FN_STAFF_TP",
             Material.BLAZE_ROD,
-            "&c传送之杖",
+            "&c传送法杖",
             "",
-            "&d右击一个方块",
-            "&d并传送到该方块上面",
+            "&e右键点击&7传送到看向的方块上",
             "",
-            "&e使用剩余: " + value.staffOfTeleportation()
+            "&e剩余使用次数: " + value.staffOfTeleportation()
     );
 
     public static final SlimefunItemStack FN_STAFF_INVI = new SlimefunItemStack(
             "FN_STAFF_INVI",
             Material.BLAZE_ROD,
-            "&c隐身之杖",
+            "&c隐身法杖",
             "",
-            "&d给予你6秒隐身",
-            "&d包括你的护甲和名称",
+            "&7给予你6秒超级隐身",
+            "&7你的护甲与名字也会隐身",
+            "&7就像从世界中消失了一样",
             "",
-            "&e使用剩余: "  + value.staffOfInvisibility()
+            "&e剩余使用次数: "  + value.staffOfInvisibility()
     );
 
     public static final SlimefunItemStack FN_STAFF_LOCOMOTION = new SlimefunItemStack(
             "FN_STAFF_LOCOMOTION",
             Material.BLAZE_ROD,
-            "&c车夫之杖",
+            "&c机动法杖",
             "",
-            "&d右击 绑定生物",
-            "&d左击 将绑定的生物推出一段距离",
+            "&e右键点击&7绑定生物",
+            "&e左键点击&7将绑定的生物推出一段距离",
             "",
-            "&e使用剩余: " + value.staffOfLocomotion()
+            "&e剩余使用次数: "  + value.staffOfLocomotion()
     );
 
     public static final SlimefunItemStack FN_STAFF_HELLFIRE = new SlimefunItemStack(
@@ -1105,23 +1196,23 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c地狱火之杖",
             "",
-            "&d释放一片区域效果云",
-            "&d在这片区域内的生物",
-            "&d会被点燃8s",
+            "&7释放一片区域效果云",
+            "&7在这片区域内的生物",
+            "&7会被点燃8s",
             "",
-            "&e使用剩余: " + value.staffOfHellFire()
+            "&e剩余使用次数: "  + value.staffOfHellFire()
     );
 
     public static final SlimefunItemStack FN_STAFF_DEEPFREEZE = new SlimefunItemStack(
             "FN_STAFF_DEEPFREEZE",
             Material.BLAZE_ROD,
-            "&c北极冰之杖",
+            "&c北极冰法杖",
             "",
             "&d释放一片区域效果云",
             "&d在这片区域内的生物",
             "&d会被减速8s",
             "",
-            "&e使用剩余: " + value.staffOfDeepFreeze()
+            "&e剩余使用次数: " + value.staffOfDeepFreeze()
     );
 
     public static final SlimefunItemStack FN_STAFF_CONFUSION = new SlimefunItemStack(
@@ -1133,7 +1224,7 @@ public class FNAmpItems {
             "&d在这片区域内的生物",
             "&d会迷失方向8s",
             "",
-            "&e使用剩余: " + value.staffOfConfusion()
+            "&e剩余使用次数: " + value.staffOfConfusion()
     );
 
     public static final SlimefunItemStack FN_STAFF_GRAVITY = new SlimefunItemStack(
@@ -1145,7 +1236,7 @@ public class FNAmpItems {
             "&d在这片区域内的生物",
             "&d将无法逃离该区域之外",
             "",
-            "&e使用剩余: " + value.staffOfGravity()
+            "&e剩余使用次数: " + value.staffOfGravity()
     );
 
     public static final SlimefunItemStack FN_STAFF_STALLION = new SlimefunItemStack(
@@ -1153,10 +1244,10 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c骷髅马之杖",
             "",
-            "&d右击召唤一只骷髅马并骑乘",
+            "&d右键点击召唤一只骷髅马并骑乘",
             "&d当你下马时，该骷髅马会自动消失",
             "",
-            "&e使用剩余: " + value.staffOfStallion()
+            "&e剩余使用次数: " + value.staffOfStallion()
     );
 
     public static final SlimefunItemStack FN_STAFF_FORCE = new SlimefunItemStack(
@@ -1164,12 +1255,12 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c力量之杖",
             "",
-            "&d右击 释放一片区域效果云",
+            "&d右键点击 释放一片区域效果云",
             "&d这片云会将区域内的生物弹至远方",
-            "&dshift右击 释放一片特殊的区域效果云",
+            "&dshift右键点击 释放一片特殊的区域效果云",
             "&d这片云将会击退所有尝试进入这片区域内的生物",
             "",
-            "&e使用剩余: " + value.staffOfForce()
+            "&e剩余使用次数: " + value.staffOfForce()
     );
 
     public static final SlimefunItemStack FN_STAFF_HEALING = new SlimefunItemStack(
@@ -1181,7 +1272,7 @@ public class FNAmpItems {
             "&d在这片区域内的生物",
             "&d将会被治愈8s",
             "",
-            "&e使用剩余: " + value.staffOfHealing()
+            "&e剩余使用次数: " + value.staffOfHealing()
     );
 
     public static final SlimefunItemStack FN_STAFF_INVULNERABILITY = new SlimefunItemStack(
@@ -1193,7 +1284,7 @@ public class FNAmpItems {
             "&d在这片区域内的生物",
             "&d将无法受到来自其他生物的伤害8s",
             "",
-            "&e使用剩余: " + value.staffOfInvulnerable()
+            "&e剩余使用次数: " + value.staffOfInvulnerable()
     );
 
     public static final SlimefunItemStack FN_STAFF_EXPLOSION = new SlimefunItemStack(
@@ -1201,10 +1292,10 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c爆裂之杖",
             "",
-            "&d右击目标方块",
+            "&d右键点击目标方块",
             "&d将会产生爆炸并造成伤害",
             "",
-            "&e使用剩余: " + value.staffOfExplosion()
+            "&e剩余使用次数: " + value.staffOfExplosion()
     );
 
     public static final SlimefunItemStack FN_STAFF_MUSTER = new SlimefunItemStack(
@@ -1212,11 +1303,11 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c引力波之杖",
             "",
-            "&d右击目标方块",
+            "&d右键点击目标方块",
             "&d将所有范围内的生物传送至该方块之上",
             "&d范围:50格",
             "",
-            "&e使用剩余: " + value.staffOfMuster()
+            "&e剩余使用次数: " + value.staffOfMuster()
     );
 
     public static final SlimefunItemStack FN_STAFF_AWARENESS = new SlimefunItemStack(
@@ -1224,11 +1315,11 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c巡视之杖",
             "",
-            "&d右击空气",
+            "&d右键点击空气",
             "&d以获取所有范围内玩家的信息",
             "&d范围:50格",
             "",
-            "&e使用剩余: " + value.staffOfAwareness()
+            "&e剩余使用次数: " + value.staffOfAwareness()
     );
 
     public static final SlimefunItemStack FN_STAFF_MINERALS = new SlimefunItemStack(
@@ -1236,11 +1327,11 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c矿工之杖",
             "",
-            "&d右击空气",
+            "&d右键点击空气",
             "&d以获取所有范围内矿物的信息",
             "&d范围:50格",
             "",
-            "&e使用剩余: " + value.staffOfMinerals()
+            "&e剩余使用次数: " + value.staffOfMinerals()
     );
 
     public static final SlimefunItemStack FN_STAFF_FANGS = new SlimefunItemStack(
@@ -1248,11 +1339,11 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c獠牙之杖",
             "",
-            "&d右击目标方向",
+            "&d右键点击目标方向",
             "&d向该方向释放一列地刺",
             "&d并造成伤害",
             "",
-            "&e使用剩余: " + value.staffOfFangs()
+            "&e剩余使用次数: " + value.staffOfFangs()
     );
 
     public static final SlimefunItemStack FN_STAFF_SKULLS = new SlimefunItemStack(
@@ -1260,11 +1351,11 @@ public class FNAmpItems {
             Material.BLAZE_ROD,
             "&c骷髅之杖",
             "",
-            "&d右击目标方向",
+            "&d右键点击目标方向",
             "&d向该方向释放一列凋灵弹",
             "&d并造成伤害和凋零效果",
             "",
-            "&e使用剩余: " + value.staffOfSkulls()
+            "&e剩余使用次数: " + value.staffOfSkulls()
     );
 
     public static final SlimefunItemStack FN_QUIVER = new SlimefunItemStack(
@@ -1272,10 +1363,10 @@ public class FNAmpItems {
             Material.LEATHER,
             "&b箭袋 (箭)",
             "",
-            "&d右击 储存箭",
-            "&dshift+右击 取出箭",
+            "&d右键点击 储存箭",
+            "&dshift+右键点击 取出箭",
             "",
-            "&e左击/右击 切换形态",
+            "&e左键点击/右键点击 切换形态",
             "&e容量: 192 支",
             "&e箭数: " + ChatColor.WHITE + "0"
     );
@@ -1285,10 +1376,10 @@ public class FNAmpItems {
             Material.LEATHER,
             "&a箭袋 (光灵箭)",
             "",
-            "&d右击 储存光灵箭",
-            "&dshift+右击 取出光灵箭",
+            "&d右键点击 储存光灵箭",
+            "&dshift+右键点击 取出光灵箭",
             "",
-            "&e左击/右击 切换形态",
+            "&e左键点击/右键点击 切换形态",
             "&e容量: 192 支",
             "&e箭数: " + ChatColor.WHITE + "0"
     );
@@ -1298,10 +1389,10 @@ public class FNAmpItems {
             Material.LEATHER,
             "&6强化箭袋 (箭)",
             "",
-            "&d右击 储存箭",
-            "&dshift+右击 取出箭",
+            "&d右键点击 储存箭",
+            "&dshift+右键点击 取出箭",
             "",
-            "&e左击/右击 切换形态",
+            "&e左键点击/右键点击 切换形态",
             "&e容量: 288 支",
             "&e箭数: " + ChatColor.WHITE + "0"
     );
@@ -1311,10 +1402,10 @@ public class FNAmpItems {
             Material.LEATHER,
             "&c强化箭袋 (光灵箭)",
             "",
-            "&d右击 储存光灵箭",
-            "&dshift+右击 取出光灵箭",
+            "&d右键点击 储存光灵箭",
+            "&dshift+右键点击 取出光灵箭",
             "",
-            "&e左击/右击 切换形态",
+            "&e左键点击/右键点击 切换形态",
             "&e容量: 288 支",
             "&e箭数: " + ChatColor.WHITE + "0"
     );
