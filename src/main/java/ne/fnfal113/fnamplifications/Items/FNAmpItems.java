@@ -1322,7 +1322,8 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c探测法杖",
         "",
-        "&e右键点击&7获取50格内所有玩家的信息",
+        "&e右键点击&7获取",
+        "&750格内所有玩家的信息",
         "",
         LoreBuilder.usesLeft(value.staffOfAwareness())
     );
@@ -1332,7 +1333,8 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c矿工法杖",
         "",
-        "&d右键点击&7获取当前区块所有矿物的信息",
+        "&e右键点击&7获取",
+        "&7当前区块所有矿物的信息",
         "",
         LoreBuilder.usesLeft(value.staffOfMinerals())
     );
@@ -1342,7 +1344,7 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c尖牙法杖",
         "",
-        "&d右键点击&7目标方向",
+        "&e右键点击&7目标方向",
         "&7向该方向释放尖牙",
         "&7并造成伤害",
         "",

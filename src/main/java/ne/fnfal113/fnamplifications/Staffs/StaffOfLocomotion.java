@@ -38,6 +38,7 @@ public class StaffOfLocomotion extends LimitedUseItem {
         super(itemGroup, item, recipeType, recipe);
 
         addItemHandler(getInteractHandler());
+        setMaxUseCount(FNAmplifications.getInstance().getConfigManager().staffOfLocomotion());
     }
 
     @Override

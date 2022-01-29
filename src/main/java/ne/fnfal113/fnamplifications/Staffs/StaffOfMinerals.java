@@ -11,6 +11,7 @@ import io.github.thebusybiscuit.slimefun4.utils.tags.SlimefunTag;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
+import net.guizhanss.guizhanlib.minecraft.helper.MaterialHelper;
 import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
 import org.bukkit.Material;
@@ -65,21 +66,20 @@ public class StaffOfMinerals extends LimitedUseItem {
             if (bookMeta == null) {
                 return;
             }
-            bookMeta.setTitle("矿石情况");
+            bookMeta.setTitle("矿物探测结果");
             bookMeta.setAuthor("FN_FAL113");
 
-            if(amount != 0) {
+            if (amount != 0) {
                 MINERALS.entrySet().stream()
                     .sorted(Map.Entry.comparingByValue())
-                    .forEachOrdered(ore -> contents.add(ChatColor.DARK_GREEN + ore.getValue().toString() + "x " + ChatColor.GOLD + ore.getKey()));
+                    .forEachOrdered(ore -> contents.add(ChatColor.DARK_GREEN + ore.getValue().toString() + "x " + ChatColor.GOLD + MaterialHelper.getNameByString(ore.getKey())));
 
-
-                firstPage.add(ChatColor.BLUE + "    矿工法杖\n\n " + ChatColor.GRAY +
+                firstPage.add(ChatColor.BLUE + "         矿工法杖\n\n " + ChatColor.GRAY +
                     "矿工法杖的力量可以探明当前区块的所有矿物信息");
                 bookMeta.addPage(firstPageBook(firstPage));
 
-                for (int i = 0; i < contents.size(); i = i + 5) {
-                    bookMeta.addPage(contents.subList(i, Math.min(i + 5, contents.size())).toString()
+                for (int i = 0; i < contents.size(); i = i + 6) {
+                    bookMeta.addPage(contents.subList(i, Math.min(i + 6, contents.size())).toString()
                         .replace("[", "")
                         .replace("]", "")
                         .replace(":", ChatColor.GRAY + " =")
@@ -88,14 +88,15 @@ public class StaffOfMinerals extends LimitedUseItem {
                 }
 
             } else {
-                firstPage.add(ChatColor.BLUE + "    矿工法杖\n\n " + ChatColor.GRAY +
-                    "当前区块已经没有任何矿石了");
+                firstPage.add(ChatColor.BLUE + "         矿工法杖\n\n " + ChatColor.GRAY +
+                    "  当前区块已经没有任何矿石了");
                 bookMeta.addPage(firstPageBook(firstPage));
             }
 
             e.cancel();
             damageItem(p, item);
 
+            writtenBook.setItemMeta(bookMeta);
             p.openBook(writtenBook);
 
             p.getWorld().playSound(p.getLocation(), Sound.ENTITY_ILLUSIONER_CAST_SPELL, 1, 1);

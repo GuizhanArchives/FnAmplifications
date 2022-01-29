@@ -47,7 +47,7 @@ public class StaffOfAwareness extends LimitedUseItem {
                 return;
             }
 
-            bookMeta.setTitle("50格内的玩家");
+            bookMeta.setTitle("玩家探测结果");
             bookMeta.setAuthor("FN_FAL113");
 
             for (Entity entity: p.getWorld().getNearbyEntities(p.getLocation().clone(), 50, 50, 50)) {
@@ -60,7 +60,7 @@ public class StaffOfAwareness extends LimitedUseItem {
             if (amount != 0) {
                 PLAYERS.forEach((key1, value1) -> players.add(ChatColor.DARK_GREEN + value1));
 
-                firstPage.add(ChatColor.GOLD + "        探测法杖\n\n " + ChatColor.GRAY +
+                firstPage.add(ChatColor.GOLD + "         探测法杖\n\n " + ChatColor.GRAY +
                     "探测法杖的力量可以找出你附近50格内的其他玩家");
                 bookMeta.addPage(firstPageBook(firstPage));
 
@@ -73,7 +73,7 @@ public class StaffOfAwareness extends LimitedUseItem {
                         .replace("_", " "));
                 }
             } else {
-                firstPage.add(ChatColor.GOLD + "        探测法杖\n\n " + ChatColor.GRAY +
+                firstPage.add(ChatColor.GOLD + "         探测法杖\n\n " + ChatColor.GRAY +
                     "  你附近没有任何玩家");
                 bookMeta.addPage(firstPageBook(firstPage));
             }
