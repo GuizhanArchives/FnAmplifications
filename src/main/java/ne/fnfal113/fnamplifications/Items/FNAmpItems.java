@@ -1171,7 +1171,7 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c隐身法杖",
         "",
-        "&7给予你6秒超级隐身",
+        "&e右键点击&7获得6秒超级隐身",
         "&7你的护甲与名字也会隐身",
         "&7就像从世界中消失了一样",
         "",
@@ -1183,20 +1183,22 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c机动法杖",
         "",
-        "&e右键点击&7绑定生物",
-        "&e左键点击&7将绑定的生物推出一段距离",
+        "&eShift + 右键点击&7绑定生物",
+        "&e右键点击&7将绑定的生物传送到看向的位置",
         "",
-        LoreBuilder.usesLeft(value.staffOfLocomotion())
+        LoreBuilder.usesLeft(value.staffOfLocomotion()),
+        "",
+        "&7当前绑定生物: &e无"
     );
 
     public static final SlimefunItemStack FN_STAFF_HELLFIRE = new SlimefunItemStack(
         "FN_STAFF_HELLFIRE",
         Material.BLAZE_ROD,
-        "&c地狱火之杖",
+        "&c地狱火法杖",
         "",
-        "&7释放一片区域效果云",
-        "&7在这片区域内的生物",
-        "&7会被点燃8s",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片地狱火区域，持续8s",
+        "&7在该区域内的生物会被点燃",
         "",
         LoreBuilder.usesLeft(value.staffOfHellFire())
     );
@@ -1206,9 +1208,9 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c北极冰法杖",
         "",
-        "&d释放一片区域效果云",
-        "&d在这片区域内的生物",
-        "&d会被减速8s",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片北极冰区域，持续8s",
+        "&7在该区域内的生物会被减速",
         "",
         LoreBuilder.usesLeft(value.staffOfDeepFreeze())
     );
@@ -1216,11 +1218,11 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_CONFUSION = new SlimefunItemStack(
         "FN_STAFF_CONFUSION",
         Material.BLAZE_ROD,
-        "&c紊乱之杖",
+        "&c混乱法杖",
         "",
-        "&d释放一片区域效果云",
-        "&d在这片区域内的生物",
-        "&d会迷失方向8s",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片混乱区域，持续8s",
+        "&7在该区域内的生物会迷失方向",
         "",
         LoreBuilder.usesLeft(value.staffOfConfusion())
     );
@@ -1228,11 +1230,12 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_GRAVITY = new SlimefunItemStack(
         "FN_STAFF_GRAVITY",
         Material.BLAZE_ROD,
-        "&c画地为牢之杖",
+        "&c引力法杖",
         "",
-        "&d释放一片区域效果云",
-        "&d在这片区域内的生物",
-        "&d将无法逃离该区域之外",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片引力区域，持续8s",
+        "&7在该区域内的生物",
+        "&7将被不断地拉向区域中心",
         "",
         LoreBuilder.usesLeft(value.staffOfGravity())
     );
@@ -1240,10 +1243,10 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_STALLION = new SlimefunItemStack(
         "FN_STAFF_STALLION",
         Material.BLAZE_ROD,
-        "&c骷髅马之杖",
+        "&c骷髅法杖",
         "",
-        "&d右键点击召唤一只骷髅马并骑乘",
-        "&d当你下马时，该骷髅马会自动消失",
+        "&e右键点击&7召唤骷髅马坐骑",
+        "&7下马后坐骑消失",
         "",
         LoreBuilder.usesLeft(value.staffOfStallion())
     );
@@ -1251,12 +1254,17 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_FORCE = new SlimefunItemStack(
         "FN_STAFF_FORCE",
         Material.BLAZE_ROD,
-        "&c力量之杖",
+        "&c力量法杖",
         "",
-        "&d右键点击 释放一片区域效果云",
-        "&d这片云会将区域内的生物弹至远方",
-        "&dshift右键点击 释放一片特殊的区域效果云",
-        "&d这片云将会击退所有尝试进入这片区域内的生物",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片力量区域，持续8s",
+        "&7进入该区域的生物会获得一个瞬间的正向力",
+        "&7(与行进方向相同)",
+        "",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片反向力量区域，持续8s",
+        "&7进入该区域的生物会获得一个瞬间的反向力",
+        "&7(与行进方向相反)",
         "",
         LoreBuilder.usesLeft(value.staffOfForce())
     );
@@ -1264,11 +1272,12 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_HEALING = new SlimefunItemStack(
         "FN_STAFF_HEALING",
         Material.BLAZE_ROD,
-        "&c治愈之杖",
+        "&c治愈法杖",
         "",
-        "&d释放一片区域效果云",
-        "&d在这片区域内的生物",
-        "&d将会被治愈8s",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片力量区域，持续8s",
+        "&7在该区域内的生物",
+        "&7将会不断地恢复2点生命值",
         "",
         LoreBuilder.usesLeft(value.staffOfHealing())
     );
@@ -1276,11 +1285,11 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_INVULNERABILITY = new SlimefunItemStack(
         "FN_STAFF_INVULNERABILITY",
         Material.BLAZE_ROD,
-        "&c辉月",
+        "&c无敌法杖",
         "",
-        "&d释放一片区域效果云",
-        "&d在这片区域内的生物",
-        "&d将无法受到来自其他生物的伤害8s",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一片无敌区域，持续8s",
+        "&7在该区域内的生物不会受到任何伤害",
         "",
         LoreBuilder.usesLeft(value.staffOfInvulnerable())
     );
@@ -1288,10 +1297,11 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_EXPLOSION = new SlimefunItemStack(
         "FN_STAFF_EXPLOSION",
         Material.BLAZE_ROD,
-        "&c爆裂之杖",
+        "&c爆裂法杖",
         "",
-        "&d右键点击目标方块",
-        "&d将会产生爆炸并造成伤害",
+        "&e右键点击&7在看向的方块上",
+        "&7制造一次爆炸并造成伤害",
+        "&7不会破坏地形",
         "",
         LoreBuilder.usesLeft(value.staffOfExplosion())
     );
@@ -1299,11 +1309,10 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_MUSTER = new SlimefunItemStack(
         "FN_STAFF_MUSTER",
         Material.BLAZE_ROD,
-        "&c引力波之杖",
+        "&c聚集法杖",
         "",
-        "&d右键点击目标方块",
-        "&d将所有范围内的生物传送至该方块之上",
-        "&d范围:50格",
+        "&e右键点击&7任意方块",
+        "&7将50格内所有生物传送至该方块上",
         "",
         LoreBuilder.usesLeft(value.staffOfMuster())
     );
@@ -1311,11 +1320,9 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_AWARENESS = new SlimefunItemStack(
         "FN_STAFF_AWARENESS",
         Material.BLAZE_ROD,
-        "&c巡视之杖",
+        "&c探测法杖",
         "",
-        "&d右键点击空气",
-        "&d以获取所有范围内玩家的信息",
-        "&d范围:50格",
+        "&e右键点击&7获取50格内所有玩家的信息",
         "",
         LoreBuilder.usesLeft(value.staffOfAwareness())
     );
@@ -1323,11 +1330,9 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_MINERALS = new SlimefunItemStack(
         "FN_STAFF_MINERALS",
         Material.BLAZE_ROD,
-        "&c矿工之杖",
+        "&c矿工法杖",
         "",
-        "&d右键点击空气",
-        "&d以获取所有范围内矿物的信息",
-        "&d范围:50格",
+        "&d右键点击&7获取当前区块所有矿物的信息",
         "",
         LoreBuilder.usesLeft(value.staffOfMinerals())
     );
@@ -1335,11 +1340,11 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_FANGS = new SlimefunItemStack(
         "FN_STAFF_FANGS",
         Material.BLAZE_ROD,
-        "&c獠牙之杖",
+        "&c尖牙法杖",
         "",
-        "&d右键点击目标方向",
-        "&d向该方向释放一列地刺",
-        "&d并造成伤害",
+        "&d右键点击&7目标方向",
+        "&7向该方向释放尖牙",
+        "&7并造成伤害",
         "",
         LoreBuilder.usesLeft(value.staffOfFangs())
     );
@@ -1347,11 +1352,11 @@ public class FNAmpItems {
     public static final SlimefunItemStack FN_STAFF_SKULLS = new SlimefunItemStack(
         "FN_STAFF_SKULLS",
         Material.BLAZE_ROD,
-        "&c骷髅之杖",
+        "&c凋灵法杖",
         "",
-        "&d右键点击目标方向",
-        "&d向该方向释放一列凋灵弹",
-        "&d并造成伤害和凋零效果",
+        "&e右键点击&7目标方向",
+        "&7向该方向释放凋灵头",
+        "&7并造成伤害和凋零效果",
         "",
         LoreBuilder.usesLeft(value.staffOfSkulls())
     );

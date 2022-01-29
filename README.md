@@ -1,15 +1,18 @@
 # FN Amplifications - FN科技
 
-由FN-FAL113编写的4合1附属插件，添加了发电机、材料发电机、机器以及太阳能发电机
+由FN-FAL113编写的4合1附属插件，添加了发电机、材料发电机、机器、太阳能发电机、法杖、武器
 
 感谢 Jeff(LiteXpansion) 和 Walshy(Slimefun) 提供的工具包  
 感谢 waleks 的 SMG 附属 (现在由 Sefiraat 与 Variananora 维护)
 
 本插件支持1.15-1.18版本
 
+**警告**: 汉化版对法杖部分进行了重写，使用汉化版将导致原版的法杖 _**完全失效**_。
+
 ## Download from build page with auto updates
 ### [Download Official Jar](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main)
 [![Build Status](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main/badge.svg)](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main)
+
 
 
 ## The addon as shown in the Slimefun Guide

@@ -2,8 +2,11 @@ package ne.fnfal113.fnamplifications.Staffs.Listener;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import ne.fnfal113.fnamplifications.FNAmplifications;
-import ne.fnfal113.fnamplifications.Staffs.*;
-import org.bukkit.*;
+import ne.fnfal113.fnamplifications.Staffs.StaffOfLocomotion;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.NamespacedKey;
+import org.bukkit.World;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -69,16 +72,14 @@ public class StaffListener implements Listener {
             }
         }
 
-        if (Objects.equals(event.getEntity().getCustomName(), "FN_HEALING")){
+        if (Objects.equals(event.getEntity().getCustomName(), "FN_HEALING")) {
             String playerCaster = event.getEntity().getPersistentDataContainer().get(new NamespacedKey(FNAmplifications.getInstance(), "cloudfn"), PersistentDataType.STRING);
-            for(LivingEntity entity : event.getAffectedEntities()){
+            for (LivingEntity entity : event.getAffectedEntities()) {
                 boolean health = entity.getAttribute(Attribute.GENERIC_MAX_HEALTH) != null;
                 if(entity instanceof Player) {
                     if (entity.getName().equals(playerCaster) && health) {
                         double maxHealth = Objects.requireNonNull(entity.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue();
-                        if (entity.getHealth() < maxHealth - 2) {
-                            entity.setHealth(entity.getHealth() + 2);
-                        }
+                        entity.setHealth(Math.min(maxHealth, entity.getHealth() + 2));
                     }
                 }
             }
@@ -103,116 +104,12 @@ public class StaffListener implements Listener {
             return;
         }
 
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfInvisibility) {
-                if (!p.isInvisible()) {
-                    ((StaffOfInvisibility) stick).onRightClick(e);
-                } else {
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cYour invisibility is still active!"));
-                }
-            }
-        }
-
         if (actionLeft && e.getHand() == EquipmentSlot.HAND) {
             if (stick instanceof StaffOfLocomotion) {
                 ((StaffOfLocomotion) stick).onLeftClick(e);
             }
         }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfHellFire) {
-                ((StaffOfHellFire) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfDeepFreeze) {
-                ((StaffOfDeepFreeze) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfConfusion) {
-                ((StaffOfConfusion) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfGravitationalPull) {
-                ((StaffOfGravitationalPull) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfStallion) {
-                ((StaffOfStallion) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfForce) {
-                ((StaffOfForce) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfHealing) {
-                ((StaffOfHealing) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfInvulnerability) {
-                ((StaffOfInvulnerability) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfExplosion) {
-                ((StaffOfExplosion) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfMuster) {
-                ((StaffOfMuster) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfAwareness) {
-                ((StaffOfAwareness) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfMinerals) {
-                ((StaffOfMinerals) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfFangs) {
-                ((StaffOfFangs) stick).onRightClick(e);
-            }
-        }
-
-        if (actionRight && e.getHand() == EquipmentSlot.HAND) {
-            if (stick instanceof StaffOfSkulls) {
-                ((StaffOfSkulls) stick).onRightClick(e);
-            }
-        }
-
     }
-
-    // For Staff of Minerals, removed in favor of written book
-    /*@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
-    public void onInteract(InventoryClickEvent event){
-        InventoryView inventoryView = event.getView();
-        if(inventoryView.getTitle().equals("Staff of Minerals")){
-            event.setCancelled(true);
-        }
-    }*/
 
     @EventHandler
     public void onPlayerDismount(VehicleExitEvent event){

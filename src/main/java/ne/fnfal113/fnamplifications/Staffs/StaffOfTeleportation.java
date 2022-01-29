@@ -9,14 +9,11 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.LimitedUseItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import ne.fnfal113.fnamplifications.config.ConfigManager;
 import ne.fnfal113.fnamplifications.FNAmplifications;
 import ne.fnfal113.fnamplifications.Items.FNAmpItems;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
 import net.guizhanss.minecraft.fnamplifications.Util;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -24,23 +21,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
 import javax.annotation.Nonnull;
-import java.util.Objects;
 
 public class StaffOfTeleportation extends LimitedUseItem {
-
-    private static final ConfigManager value = FNAmplifications.getInstance().getConfigManager();
-
-    private static final NamespacedKey usageKey = new NamespacedKey(FNAmplifications.getInstance(), "tpstaff");
 
     public StaffOfTeleportation(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
 
-        setMaxUseCount(value.staffOfTeleportation());
-    }
-
-    @Override
-    protected @Nonnull NamespacedKey getStorageKey() {
-        return usageKey;
+        setMaxUseCount(FNAmplifications.getInstance().getConfigManager().staffOfTeleportation());
     }
 
     @Override
@@ -51,23 +38,21 @@ public class StaffOfTeleportation extends LimitedUseItem {
             Block block = p.getTargetBlockExact(100);
             Vector directional = p.getLocation().getDirection();
 
-            if (block == null || item.getType() == Material.AIR){
+            if (block == null){
                 return;
             }
 
-            if (!Slimefun.getProtectionManager().hasPermission(
-                Bukkit.getOfflinePlayer(p.getUniqueId()),
-                block,
-                Interaction.BREAK_BLOCK)
-            ) {
+            if (!Slimefun.getProtectionManager().hasPermission(p, block, Interaction.BREAK_BLOCK)) {
                 Util.send(p, "&4你没有权限传送到目标地点!");
                 return;
             }
 
             e.cancel();
             damageItem(p, item);
+
             p.teleport(block.getLocation().add(0.5, 1, 0.5).setDirection(directional));
-            Objects.requireNonNull(p.getLocation().getWorld()).playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
+
+            p.getLocation().getWorld().playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
         };
     }
 

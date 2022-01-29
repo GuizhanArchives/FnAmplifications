@@ -1,20 +1,18 @@
 package ne.fnfal113.fnamplifications;
 
-import javax.annotation.Nonnull;
-
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
-
 import ne.fnfal113.fnamplifications.Gears.Listeners.GearListener;
 import ne.fnfal113.fnamplifications.Gears.Runnables.ArmorEquipRunnable;
+import ne.fnfal113.fnamplifications.Items.FNAmpItemSetup;
 import ne.fnfal113.fnamplifications.MysteriousItems.Listeners.MysteryStickListener;
 import ne.fnfal113.fnamplifications.Quiver.Listener.QuiverListener;
 import ne.fnfal113.fnamplifications.Staffs.Listener.StaffListener;
 import ne.fnfal113.fnamplifications.config.ConfigManager;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import ne.fnfal113.fnamplifications.Items.FNAmpItemSetup;
+import javax.annotation.Nonnull;
 
 public final class FNAmplifications extends JavaPlugin implements SlimefunAddon {
 
@@ -48,8 +46,9 @@ public final class FNAmplifications extends JavaPlugin implements SlimefunAddon 
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
-        if (getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "FN-FAL113/FN-FAL-s-Amplifications/main").start();
+        if (getConfig().getBoolean("auto-update") &&
+            getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "FnAmplifications-CN", "main", false).start();
         }
     }
 
