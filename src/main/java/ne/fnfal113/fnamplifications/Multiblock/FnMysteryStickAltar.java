@@ -115,14 +115,14 @@ public class FnMysteryStickAltar extends MultiBlockMachine {
 
 
                             outputInv.addItem(output);
-                            p.sendMessage(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Mystery Stick is now ready to use!");
+                            p.sendMessage(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "神秘棍可以使用了!");
                         }, 30);
                     }, 30);
                 }, 30);
             }, 30);
         } else {
             Slimefun.getLocalization().sendMessage(p, "machines.full-inventory", true);
-            p.sendMessage(ChatColor.YELLOW + "" + ChatColor.BOLD + "Add an output chest for the outputs!");
+            p.sendMessage(ChatColor.YELLOW + "" + ChatColor.BOLD + "输出栏已满!");
         }
     }
 

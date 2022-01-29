@@ -3,6 +3,7 @@ package ne.fnfal113.fnamplifications.MysteriousItems.Listeners;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 
 import ne.fnfal113.fnamplifications.MysteriousItems.*;
+import net.guizhanss.minecraft.fnamplifications.Util;
 import org.bukkit.ChatColor;
 
 import org.bukkit.Material;
@@ -144,8 +145,8 @@ public class MysteryStickListener implements Listener {
 
     public void blindPlayer(Player p, int levelReq){
         p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 300, 2, false, false));
-        p.sendMessage(ChatColor.RED + "" + ChatColor.BOLD  + "[FNAmpli" + ChatColor.AQUA + "" + ChatColor.BOLD + "fications] > " + ChatColor.YELLOW + "You're too weak, make sure your exp level is higher than " + levelReq);
-        p.sendTitle(ChatColor.DARK_RED + " Your vision darkens!", ChatColor.RED + "The stick is unpredictable", 15, 40, 45);
+        Util.send(p, "&4&l 你现在太弱了，还无法使用神秘棍。你需要至少" + levelReq + "级才能使用");
+        p.sendTitle(ChatColor.DARK_RED + "你的视野变暗了!", ChatColor.RED + "你无法掌控神秘棍的力量", 15, 40, 45);
     }
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)

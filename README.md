@@ -9,55 +9,59 @@
 
 **警告**: 汉化版对法杖部分进行了重写，使用汉化版将导致原版的法杖 _**完全失效**_。
 
-## Download from build page with auto updates
-### [Download Official Jar](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main)
-[![Build Status](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main/badge.svg)](https://thebusybiscuit.github.io/builds/FN-FAL113/FN-FAL-s-Amplifications/main)
+**警告**: 汉化版正在对神秘棍部分进行重写，使用汉化版可能导致原版的神秘棍 _**失效**_。
 
+**警告**: 汉化版正在对箭袋部分进行重写，使用汉化版将导致原版的箭袋 _**完全失效**_。箭袋重写完成之前无法使用。
 
+## 下载
 
-## The addon as shown in the Slimefun Guide
-![guide](https://user-images.githubusercontent.com/88238718/136697193-5c52d89f-2f01-40e6-b5b7-6f730a17bbd0.png)
+**自动更新**: 汉化版构建#1及以后版本包含*自动更新*功能，默认开启。
 
-#### Power Xpansion Category
-![Power X Category](https://user-images.githubusercontent.com/88238718/138582193-9c6f145c-d096-4f36-94bf-0807a1420309.png)
+点击这里下载 FnAmplifications: [下载 FnAmplifications](https://builds.guizhanss.net/ybw0014/FnAmplifications-CN/master)
 
-#### Material Generators Category
-![Material Gen Category](https://user-images.githubusercontent.com/88238718/138582194-5403216c-0527-43b1-ab34-aabdb6f6170b.png)
-
-#### Solar Generators Category
-![Solar Gen Category](https://user-images.githubusercontent.com/88238718/138582197-a6e44e59-a21d-461a-a154-5bb294030782.png)
-
-#### Machinery and Items Category
-![Machinery Category](https://user-images.githubusercontent.com/88238718/138582199-7b18befb-dfd6-42b7-8962-e538a1535b41.png)![Machinery Items Category](https://user-images.githubusercontent.com/88238718/138582200-9995884a-39a5-406f-9f55-598698e3c767.png)
-
-#### Mystery Sticks Category
-![MysterySticks](https://user-images.githubusercontent.com/88238718/145703147-d8c55904-81d4-4509-9eb6-af84ca038ae4.png)
-
-#### Gears Category
-![Gears](https://user-images.githubusercontent.com/88238718/149249881-995fd862-7971-4f9a-86a5-aed4cbdc3f82.png)
-
-#### Staffs Category
-![Staffs](https://user-images.githubusercontent.com/88238718/149249876-445bfb07-f378-4653-af96-df7a556790de.png)
-
-#### Misc Category
-![misc](https://user-images.githubusercontent.com/88238718/149249878-fb5b21fb-1059-4fd0-a1bd-23ef6b6d2e6b.png)
-
-### Everything is configurable in terms of Power Rates, Buffer, Capacity, Tick Rates and Lores
-![config1](https://user-images.githubusercontent.com/88238718/142844553-2b141c58-e0f8-4595-8e29-3099d690fadd.png)
-![config2](https://user-images.githubusercontent.com/88238718/142844555-64fb0203-3d3a-4a32-8c22-ca4123fe31c5.png)
-![config3](https://user-images.githubusercontent.com/88238718/136697386-a52bc1d3-2897-4524-bea4-b64c308065ed.png)
-
-### Head to my addon channel at SF Addon Community Server for feedbacks 
-<p>
-  <a href="https://discord.gg/slimefun">
-    <img src="https://discordapp.com/api/guilds/565557184348422174/widget.png?style=banner3" alt="Discord Invite"/>
+<p align="center">
+  <a href="https://github.com/ybw0014/FnAmplifications-CN/actions/workflows/maven.yml">
+    <img src="https://github.com/ybw0014/FnAmplifications-CN/actions/workflows/maven.yml/badge.svg" alt="Java CI"/>
   </a>
-  <a href="https://discord.gg/SqD3gg5SAU">
-    <img src="https://discordapp.com/api/guilds/809178621424041997/widget.png?style=banner3" alt="Discord Invite"/>
+  <a href="https://builds.guizhanss.net/ybw0014/FnAmplifications-CN/master">
+    <img src="https://builds.guizhanss.net/f/ybw0014/FnAmplifications-CN/master/badge.svg" alt="Build status"/>
   </a>
 </p>
 
-### Slimefun addons
+## 内容
 
-Addon is now part of Slimefun Community Addons! Go check out others addon here:
-https://github.com/Slimefun/Slimefun4/wiki/Addons
+该附属包含以下分类：
+
+- 发电机
+    - 可完全自定义
+    - 共12个等级
+- 太阳能发电机
+    - 可完全自定义（默认仅白天工作，可设置夜间工作）
+    - 共8个等级
+- 材料生成器
+    - 每隔一段时间生成指定材料，
+    - 不需要电力
+    - 造价昂贵
+- 机器
+    - 转换器：可使用部分材料来快速升级物品/机器
+    - 液压机：可以压缩一些物品（包括压缩机压缩不了的）
+    - 电锭冷凝机：可以使用材料来制造更高级的锭
+    - 电动回收机：可以将物品降级
+    - 电机降级器：可以将机器降级
+    - 电动方块挖掘机：自动挖掘面前的方块（仅支持原版方块）
+- 零件
+    - 包含制作机器和发电机的各种零件
+    - 金属废料：有几率在使用电机降级器时作为副产品产出，可合成部分零件
+- 多方块结构
+    - 包含一些FN基础机器
+- 金属配料配方
+    - 在这里查看金属配料的可用配方
+- 神秘棍
+    - 你可以获得一些武器，不过需要等级才能解锁
+- 盔甲
+- 法杖
+    - 有使用次数限制，可自定义调整
+    - 拥有各种不同的功能
+- 杂项
+    - 箭袋（暂时禁用）：可以存储箭矢
+    - 锄头：可以开垦5x5区域

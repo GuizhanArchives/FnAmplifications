@@ -403,7 +403,7 @@ public class FNAmpItems {
     public static final SlimefunItemStack FMG_GENERATOR_DIAMOND_BROKEN = new SlimefunItemStack(
         "FMG_GENERATOR_DIAMOND_BROKEN",
         Material.DIAMOND_BLOCK,
-        "&bFN_FAL钻石生成器 &8(破损)",
+        "&bFN钻石生成器 &8(破损)",
         "",
         "&7需要修复"
     );
