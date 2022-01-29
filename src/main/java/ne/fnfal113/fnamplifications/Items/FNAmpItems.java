@@ -126,7 +126,7 @@ public class FNAmpItems {
         new NamespacedKey(FNAmplifications.getInstance(), "FN_MISC"),
         FN_ITEMS,
         new CustomItemStack(Material.CHEST,
-            "&eFN箭袋"));
+            "&eFN杂项"));
 
     public static final ItemGroup FN_AMPLIFICATIONS = new ItemGroup(
         new NamespacedKey(FNAmplifications.getInstance(), "FN_AMPLIFICATIONS"),
@@ -1183,7 +1183,7 @@ public class FNAmpItems {
         Material.BLAZE_ROD,
         "&c机动法杖",
         "",
-        "&eShift + 右键点击&7绑定生物",
+        "&eShift+右键点击&7绑定生物",
         "&e右键点击&7将绑定的生物传送到看向的位置",
         "",
         LoreBuilder.usesLeft(value.staffOfLocomotion()),
@@ -1368,10 +1368,14 @@ public class FNAmpItems {
         Material.LEATHER,
         "&b箭袋 (箭)",
         "",
-        "&d右键点击 储存箭",
-        "&dshift+右键点击 取出箭",
+        "&7将箭袋放在副手:",
+        "&e右键点击&7储存",
+        "&eShift+右键点击&7取出",
         "",
-        "&e左键点击/右键点击 切换形态",
+        "&7将箭袋放在主手:",
+        "&e右键点击&7切换为打开状态",
+        "&e左键点击&7切换为关闭状态",
+        "",
         "&e容量: 192 支",
         "&e箭数: " + ChatColor.WHITE + "0"
     );
@@ -1381,10 +1385,14 @@ public class FNAmpItems {
         Material.LEATHER,
         "&a箭袋 (光灵箭)",
         "",
-        "&d右键点击 储存光灵箭",
-        "&dshift+右键点击 取出光灵箭",
+        "&7将箭袋放在副手:",
+        "&e右键点击&7储存",
+        "&eShift+右键点击&7取出",
         "",
-        "&e左键点击/右键点击 切换形态",
+        "&7将箭袋放在主手:",
+        "&e右键点击&7切换为打开状态",
+        "&e左键点击&7切换为关闭状态",
+        "",
         "&e容量: 192 支",
         "&e箭数: " + ChatColor.WHITE + "0"
     );
@@ -1394,10 +1402,14 @@ public class FNAmpItems {
         Material.LEATHER,
         "&6强化箭袋 (箭)",
         "",
-        "&d右键点击 储存箭",
-        "&dshift+右键点击 取出箭",
+        "&7将箭袋放在副手:",
+        "&e右键点击&7储存",
+        "&eShift+右键点击&7取出",
         "",
-        "&e左键点击/右键点击 切换形态",
+        "&7将箭袋放在主手:",
+        "&e右键点击&7切换为打开状态",
+        "&e左键点击&7切换为关闭状态",
+        "",
         "&e容量: 288 支",
         "&e箭数: " + ChatColor.WHITE + "0"
     );
@@ -1407,21 +1419,24 @@ public class FNAmpItems {
         Material.LEATHER,
         "&c强化箭袋 (光灵箭)",
         "",
-        "&d右键点击 储存光灵箭",
-        "&dshift+右键点击 取出光灵箭",
+        "&7将箭袋放在副手:",
+        "&e右键点击&7储存",
+        "&eShift+右键点击&7取出",
         "",
-        "&e左键点击/右键点击 切换形态",
+        "&7将箭袋放在主手:",
+        "&e右键点击&7切换为打开状态",
+        "&e左键点击&7切换为关闭状态",
+        "",
         "&e容量: 288 支",
         "&e箭数: " + ChatColor.WHITE + "0"
     );
 
     public static final SlimefunItemStack FN_HOE_5X5 = new SlimefunItemStack(
-            "FN_HOE_5X5",
-            Material.DIAMOND_HOE,
-            "&cFN's Hoe",
-            "",
-            "&dCan soil/till land and harvest",
-            "&dcrops in a 5x5 square area"
+        "FN_HOE_5X5",
+        Material.DIAMOND_HOE,
+        "&cFN的锄头",
+        "",
+        "&d可以一次性开垦5x5区域的土地"
     );
 
 }

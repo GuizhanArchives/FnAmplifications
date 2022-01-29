@@ -52,7 +52,7 @@ public final class FNAmpItemSetup {
         registerStick();
         registerGear();
         registerStaff();
-        registerQuiver();
+        //registerQuiver();
         registerTools();
     }
 
