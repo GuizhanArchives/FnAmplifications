@@ -1415,4 +1415,13 @@ public class FNAmpItems {
         "&e箭数: " + ChatColor.WHITE + "0"
     );
 
+    public static final SlimefunItemStack FN_HOE_5X5 = new SlimefunItemStack(
+            "FN_HOE_5X5",
+            Material.DIAMOND_HOE,
+            "&cFN's Hoe",
+            "",
+            "&dCan soil/till land and harvest",
+            "&dcrops in a 5x5 square area"
+    );
+
 }
