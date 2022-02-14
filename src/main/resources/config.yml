@@ -19,6 +19,10 @@ New-Recipe-Integration: true
 # 护甲效果的更新检测间隔 (单位: 秒)
 armor-update-period: 10
 
+# Enable or disable chat changelogs, this changelog get sent only when players join the server for the first time after server restart
+# If disabled no more changelogs will be sent, requires server restart
+Enable-One-Time-Chat-Changelog: true
+
 ##
 ## 在下方修改 FN 发电机的相关数值
 ## 重启服务器后生效
@@ -245,6 +249,8 @@ Staff-of-Awareness: 10
 Staff-of-Minerals: 10
 Staff-of-Fangs: 10
 Staff-of-Skulls: 10
+Staff-of-AirStrider: 10
+Staff-of-Cobwebs: 10
 
 # FN Gears of Friction (Unbreakability)
 # Default is set to false (if set to true, will apply only on newly crafted gears)
@@ -252,3 +258,14 @@ FN-Helmet-Unbreakable: false
 FN-Chestplate-Unbreakable: false
 FN-Leggings-Unbreakable: false
 FN-boots-Unbreakable: false
+
+# Gem chances of taking effect
+# Requires server restart
+Gem-Armor-Impair: 15
+Gem-Inferno: 16
+Gem-Thunderbolt: 10
+Gem-Hasty: 16
+Gem-ThornAway: 13
+Gem-Impostor: 14
+Gem-Psychokinesis: 17
+Gem-Blindbind: 13

@@ -457,6 +457,14 @@ public class ConfigManager {
         return config.getInt("Staff-of-Skulls");
     }
 
+    public int staffOfAirStrider() {
+        return config.getInt("Staff-of-AirStrider");
+    }
+
+    public int staffOfCobWebs() {
+        return config.getInt("Staff-of-Cobwebs");
+    }
+
     public boolean fnHelmetUnbreakable(){
         return config.getBoolean("FN-Helmet-Unbreakable");
     }
@@ -471,6 +479,42 @@ public class ConfigManager {
 
     public boolean fnBootsUnbreakable(){
         return config.getBoolean("FN-boots-Unbreakable");
+    }
+
+    public int armorImpairGem() {
+        return config.getInt("Gem-Armor-Impair");
+    }
+
+    public int infernoGem() {
+        return config.getInt("Gem-Inferno");
+    }
+
+    public int thunderBoltGem() {
+        return config.getInt("Gem-Thunderbolt");
+    }
+
+    public int hastyGem() {
+        return config.getInt("Gem-Hasty");
+    }
+
+    public int thornAwayGem() {
+        return config.getInt("Gem-ThornAway");
+    }
+
+    public int impostorGem() {
+        return config.getInt("Gem-Impostor");
+    }
+
+    public int psychoKinesisGem() {
+        return config.getInt("Gem-Psychokinesis");
+    }
+
+    public int blindBindGem() {
+        return config.getInt("Gem-Blindbind");
+    }
+
+    public boolean changelogEnable(){
+        return config.getBoolean("Enable-One-Time-Chat-Changelog");
     }
 
 }

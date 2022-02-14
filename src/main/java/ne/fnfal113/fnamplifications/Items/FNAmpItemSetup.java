@@ -7,9 +7,11 @@ import ne.fnfal113.fnamplifications.Gears.FnBoots;
 import ne.fnfal113.fnamplifications.Gears.FnChestPlate;
 import ne.fnfal113.fnamplifications.Gears.FnHelmet;
 import ne.fnfal113.fnamplifications.Gears.FnLeggings;
+import ne.fnfal113.fnamplifications.Gems.*;
 import ne.fnfal113.fnamplifications.Machines.*;
 import ne.fnfal113.fnamplifications.MaterialGenerators.FNMaterialGenerators;
 import ne.fnfal113.fnamplifications.Multiblock.FnAssemblyStation;
+import ne.fnfal113.fnamplifications.Multiblock.FnGemAltar;
 import ne.fnfal113.fnamplifications.Multiblock.FnMysteryStickAltar;
 import ne.fnfal113.fnamplifications.Multiblock.FnScrapRecycler;
 import ne.fnfal113.fnamplifications.MysteriousItems.*;
@@ -21,6 +23,7 @@ import ne.fnfal113.fnamplifications.Quiver.UpgradedQuiver;
 import ne.fnfal113.fnamplifications.Quiver.UpgradedSpectralQuiver;
 import ne.fnfal113.fnamplifications.Staffs.*;
 import ne.fnfal113.fnamplifications.Tools.FnHoe;
+import ne.fnfal113.fnamplifications.Tools.FnHoeAutoPlant;
 
 public final class FNAmpItemSetup {
 
@@ -54,6 +57,7 @@ public final class FNAmpItemSetup {
         registerStaff();
         //registerQuiver();
         registerTools();
+        registerGems();
     }
 
     private void registerPowerGens() {
@@ -107,6 +111,7 @@ public final class FNAmpItemSetup {
         new FnAssemblyStation().register(FNAmplifications.getInstance());
         new FnScrapRecycler().register(FNAmplifications.getInstance());
         new FnMysteryStickAltar().register(FNAmplifications.getInstance());
+        new FnGemAltar().register(FNAmplifications.getInstance());
     }
 
     private void registerScrapRecipes() {
@@ -156,6 +161,8 @@ public final class FNAmpItemSetup {
         StaffOfMinerals.setup();
         StaffOfFangs.setup();
         StaffOfSkulls.setup();
+        StaffOfAirStrider.setup();
+        StaffOfWebs.setup();
     }
 
     public void registerQuiver(){
@@ -165,7 +172,21 @@ public final class FNAmpItemSetup {
         UpgradedSpectralQuiver.setup();
     }
 
+    public void registerGems(){
+        InfernoGem.setup();
+        ArmorImpairGem.setup();
+        TelepathyGem.setup();
+        ThunderBoltGem.setup();
+        HastyGem.setup();
+        ThornAwayGem.setup();
+        ImpostorGem.setup();
+        PsychokinesisGem.setup();
+        AxeThrowieGem.setup();
+        BlindBindGem.setup();
+    }
+
     public void registerTools(){
         FnHoe.setup();
+        FnHoeAutoPlant.setup();
     }
 }
